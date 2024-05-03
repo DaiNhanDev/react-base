@@ -107,6 +107,8 @@ export const Search: React.FC<FormInputProps & InputProps> = ({
               <SearchOutlined
                 className="search"
                 onClick={handleSubmit(onSubmit)}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
             }
             onPressEnter={onKeyPress}

@@ -60,6 +60,9 @@ export const App: React.FC = () => {
         if (event.data === BROADCAST_CHANNEL.LOGIN && userToken) {
           getMe();
         }
+        if (event.data === BROADCAST_CHANNEL.LOGOUT) {
+          // handle Logout
+        }
       });
     }
   }, [boardcastChannel]);

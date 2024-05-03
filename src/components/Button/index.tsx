@@ -76,8 +76,10 @@ const ButtonStyled = styled(BaseButton)`
 `;
 
 type ButtonType = BaseButtonType | 'outline' | 'icon';
-const Button: React.FC<
-  Omit<ButtonProps, 'type'> &
-    React.RefAttributes<HTMLElement> & { type?: ButtonType }
-> = ({ type, ...props }) => <ButtonStyled type={type as any} {...props} />;
+
+const Button: React.FC<Omit<ButtonProps, 'type'> & { type?: ButtonType }> = ({
+  type,
+  ...props
+}) => <ButtonStyled type={type as any} {...props} />;
+
 export { Button };

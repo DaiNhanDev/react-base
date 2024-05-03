@@ -1,4 +1,4 @@
-import { GithubRepoFormState } from 'screens/HomePage/Features/GithubRepoForm/slice/types';
+import { GithubRepoFormState } from 'modules/HomePage/Features/GithubRepoForm/slice/types';
 import { UsersState } from 'slices/users/types';
 import { ThemeState } from 'slices/theme/types';
 import { AuthState } from 'slices/auth/types';

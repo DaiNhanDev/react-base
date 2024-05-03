@@ -2,7 +2,7 @@
 import React from 'react';
 import { Switch, BrowserRouter } from 'react-router-dom';
 
-import { NotFoundPage } from 'screens/NotFoundPage';
+import { NotFoundPage } from 'modules/NotFoundPage';
 import PrivateRoute from './privateRoute';
 
 import PublicRoute from './publicRoute';
@@ -13,9 +13,9 @@ const AppRoutes: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
-        {PRIVATE_ROUTES.map((routeConfig) => (
+        {/* {PRIVATE_ROUTES.map((routeConfig) => (
           <PrivateRoute key={routeConfig.path} {...routeConfig} />
-        ))}
+        ))} */}
         {PUBLIC_ROUTES.map((routeConfig) => (
           <PublicRoute key={routeConfig.path} {...routeConfig} />
         ))}
