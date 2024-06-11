@@ -1,3 +1,4 @@
+import { RouterState } from 'connected-react-router';
 import { GithubRepoFormState } from 'modules/HomePage/Features/GithubRepoForm/slice/types';
 import { UsersState } from 'slices/users/types';
 import { ThemeState } from 'slices/theme/types';
@@ -24,4 +25,5 @@ export interface RootState {
   invoice: InvoiceState;
   broadcast: BroadcastState;
   jancode: JancodeState;
+  router: RouterState;
 }

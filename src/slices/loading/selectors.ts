@@ -5,9 +5,12 @@ import { initialState } from '.';
 
 // First select the relevant part from the state
 const selectDomain = (state: RootState) => {
-  return state.loading || initialState;
+  return state;
 };
 
-export const selectLoading = createSelector([selectDomain], (data) => {
-  return data.loading;
-});
+export const selectLoading = createSelector(
+  selectDomain,
+  ({ loading = initialState }) => {
+    return loading;
+  },
+);

@@ -8,12 +8,14 @@
 import ReactDOM from 'react-dom/client';
 // import { Switch, BrowserRouter, Router } from 'react-router-dom';
 import { GlobalStyle } from 'styles/global-styles';
+import { ConnectedRouter } from 'connected-react-router';
 
 import { Provider } from 'react-redux';
 
 import { HelmetProvider } from 'react-helmet-async';
 
 import { configureAppStore } from 'store/configureStore';
+import { history } from 'store/reducers';
 
 import { ThemeProvider } from 'styles/theme/ThemeProvider';
 
@@ -36,19 +38,21 @@ import './locales/i18n';
 //   console.log('====> ERROR');
 // });
 
-const store = configureAppStore();
+const store = configureAppStore(history);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <Provider store={store}>
-    <ThemeProvider>
-      <HelmetProvider>
-        <GlobalStyle />
-        <App />
-      </HelmetProvider>
-    </ThemeProvider>
+    <ConnectedRouter history={history}>
+      <ThemeProvider>
+        <HelmetProvider>
+          <GlobalStyle />
+          <App />
+        </HelmetProvider>
+      </ThemeProvider>
+    </ConnectedRouter>
   </Provider>,
 );
 

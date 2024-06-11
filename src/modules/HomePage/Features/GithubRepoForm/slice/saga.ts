@@ -1,4 +1,5 @@
 import { call, put, select, takeLatest, delay } from 'redux-saga/effects';
+import { LOCATION_CHANGE } from 'connected-react-router';
 import { request } from 'utils/request';
 import { Repo } from 'types/Repo';
 import { UserModel } from 'models';
@@ -48,6 +49,14 @@ export function* getUsers() {
   }
 }
 
+export function* locationChangeSaga() {
+  try {
+    yield console.log('object');
+  } catch (err: any) {
+    console.log('=====> errors: ', err);
+  }
+}
+
 /**
  * Root saga manages watcher lifecycle
  */
@@ -58,4 +67,5 @@ export function* githubRepoFormSaga() {
   // It will be cancelled automatically on component unmount
   yield takeLatest(actions.loadRepos.type, getRepos);
   yield takeLatest(actions.loadUsers.type, getUsers);
+  yield takeLatest(LOCATION_CHANGE, locationChangeSaga);
 }

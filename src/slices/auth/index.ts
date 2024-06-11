@@ -1,7 +1,8 @@
-import { PayloadAction } from '@reduxjs/toolkit';
+import { PayloadAction, createAction } from '@reduxjs/toolkit';
 import { createSlice } from 'utils/@reduxjs/toolkit';
 import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
 import { useSelector, useDispatch } from 'react-redux';
+import { LOCATION_CHANGE } from 'connected-react-router';
 
 import { UserModel } from 'models';
 import { saga } from './saga';
@@ -14,6 +15,7 @@ export const initialState: AuthState = {
   user_profile: null,
 };
 
+const locationChange = createAction(LOCATION_CHANGE);
 const slice = createSlice({
   name: 'auth',
   initialState,
@@ -39,6 +41,12 @@ const slice = createSlice({
       state.loading = false;
       state.user_profile = null;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(locationChange, (state, action: PayloadAction<any>) => {
+      console.log('====> action', action.payload.location.pathname);
+      console.log('====> state', state);
+    });
   },
 });
 
