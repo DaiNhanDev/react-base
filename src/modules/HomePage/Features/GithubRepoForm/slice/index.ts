@@ -67,7 +67,6 @@ const slice = createSlice({
       },
     );
   },
- 
 });
 
 export const { actions: githubRepoFormActions, reducer } = slice;

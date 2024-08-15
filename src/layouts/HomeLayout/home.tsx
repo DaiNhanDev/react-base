@@ -15,7 +15,7 @@ const items = new Array(6).fill(null).map((_, index) => ({
 const HomeLayout: React.FC<IProps> = ({ children }) => {
   return (
     <Layout>
-      <Header
+      {/* <Header
         style={{
           position: 'sticky',
           top: 0,
@@ -35,19 +35,11 @@ const HomeLayout: React.FC<IProps> = ({ children }) => {
           items={items}
           style={{ flex: 1, minWidth: 0 }}
         />
-      </Header>
-      <Content>
-        <div
-          style={{
-            minHeight: 280,
-          }}
-        >
-          {children}
-        </div>
-      </Content>
-      <Footer style={{ textAlign: 'center', background: 'green' }}>
+      </Header> */}
+      <Content>{children}</Content>
+      {/* <Footer style={{ textAlign: 'center', background: 'green' }}>
         Ant Design ©{new Date().getFullYear()} Created by Ant UED
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 };

@@ -1,22 +1,24 @@
 import HomeLayout from 'layouts/HomeLayout/home';
-import { SignIn } from 'modules/Auth/SignIn/Loadable';
-import { HomePage } from 'modules/HomePage/Loadable';
+import { Categories } from 'modules/Categories/Loadable';
+import { Detail } from 'modules/Detail/Loadable';
 
 export const RoutesName = {
   LOGIN: '/login',
   HOME: '/',
+  CATEGORIES: '/',
+  DETAIL: '/detail/:id',
 };
 
 export const PUBLIC_ROUTES = [
   {
-    path: RoutesName.LOGIN,
-    component: SignIn,
+    path: RoutesName.CATEGORIES,
+    component: Categories,
     layout: HomeLayout,
     exact: true,
   },
   {
-    path: RoutesName.HOME,
-    component: HomePage,
+    path: RoutesName.DETAIL,
+    component: Detail,
     layout: HomeLayout,
     exact: true,
   },
