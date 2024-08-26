@@ -8,6 +8,7 @@ import { LoadingState } from 'slices/loading/types';
 import { InvoiceState } from 'slices/invoice/types';
 import { BroadcastState } from 'slices/broadcast/types';
 import { JancodeState } from 'slices/jancode/types';
+import { AuctionsState } from 'slices/auctions/types';
 
 /* 
   Because the redux-injectors injects your reducers asynchronously somewhere in your code
@@ -26,4 +27,5 @@ export interface RootState {
   broadcast: BroadcastState;
   jancode: JancodeState;
   router: RouterState;
+  auctions: AuctionsState;
 }

@@ -6,7 +6,7 @@ import axios, {
 } from 'axios';
 import { STORAGE, getLocalStorage, removeLocalStorage } from 'utils/storage';
 
-const BASE_URL = 'http://localhost:8080/api/v1';
+const BASE_URL = 'http://localhost:8083/api/v1';
 
 // For Make Log on Develop Mode
 const logOnDev = (message: string) => {
@@ -43,7 +43,6 @@ const onRequest = (
   // Set Headers Here
   // Check Authentication Here
   // Set Loading Start Here
-
   const token = getToken();
 
   if (token) {

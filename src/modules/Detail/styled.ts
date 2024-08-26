@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  /* display: flex; */
+  padding: 16px;
   display: flex;
-  flex-direction: row;
 `;
 
 const Title = styled.div`
@@ -21,12 +20,8 @@ const Login = styled.span`
 `;
 
 const Left = styled.div`
-  display: flex;
-  width: 45%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 480px;
+  height: 480px;
 `;
 
 const Form = styled.div`

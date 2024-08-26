@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useAuctions } from 'slices/auctions';
+
 import {
   Carousel,
   CarouselImage,
@@ -109,7 +111,10 @@ const data = [
 
 export const Categories: React.FC = () => {
   const { push } = useHistory();
-
+  const { getCategories } = useAuctions();
+  useEffect(() => {
+    getCategories();
+  }, []);
   return (
     <Wrapper>
       <Title>

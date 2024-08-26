@@ -25,7 +25,7 @@ export const App: React.FC = () => {
   // const { i18n } = useTranslation();
   const [loading, setLoading] = React.useState(true);
 
-  const { getMe, authenticated } = useAuth();
+  const { getMe } = useAuth();
   const { setBroadcastChannel, boardcastChannel } = useBroadcast();
 
   // const { error } = useError();

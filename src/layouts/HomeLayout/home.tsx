@@ -1,45 +1,80 @@
-import React from 'react';
-import { Layout, Menu } from 'antd';
-import { LOGO } from 'assets';
-import { Clickable } from 'components';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useAuctions } from 'slices/auctions';
 
+import type { MenuProps } from 'antd';
+import { Layout, Menu, Spin } from 'antd';
+import { useLoading } from 'slices/loading';
+
+const { Content, Footer, Sider } = Layout;
+
+type MenuItem = Required<MenuProps>['items'][number];
 interface IProps {
   children: JSX.Element[];
 }
 
-const { Header, Content, Footer } = Layout;
-const items = new Array(6).fill(null).map((_, index) => ({
-  key: index + 1,
-  label: `nav_13 ${index + 1}`,
-}));
+function getItem(
+  label: React.ReactNode,
+  key: React.Key,
+  icon?: React.ReactNode,
+  children?: MenuItem[],
+): MenuItem {
+  return {
+    key,
+    icon,
+    children,
+    label,
+  } as MenuItem;
+}
+
 const HomeLayout: React.FC<IProps> = ({ children }) => {
+  const { loading } = useLoading();
+  const [current, setCurrent] = useState<string>('');
+  const { getCategories, getProducts, categories } = useAuctions();
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+  useEffect(() => {
+    if (current) {
+      getProducts(current);
+    }
+  }, [current]);
+  console.log('====>loading: ', loading);
+  const onClick: MenuProps['onClick'] = (e) => {
+    console.log('click ', e);
+    setCurrent(e.key);
+  };
+  const items = useMemo(
+    () => categories.map((item) => getItem(item.text, item.code)),
+    [categories],
+  );
+
   return (
-    <Layout>
-      {/* <Header
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 1,
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          background: 'white',
-        }}
+    <Layout style={{ minHeight: '100vh' }}>
+      <Sider
+      // collapsible
+      // collapsed={collapsed}
+      // onCollapse={(value) => setCollapsed(value)}
       >
-        <Clickable>
-          <img src={LOGO} alt="logo" style={{ height: 48, borderRadius: 12 }} />
-        </Clickable>
         <Menu
-          mode="horizontal"
+          theme="dark"
           defaultSelectedKeys={['1']}
+          mode="inline"
           items={items}
-          style={{ flex: 1, minWidth: 0 }}
+          onClick={onClick}
+          selectedKeys={[current]}
         />
-      </Header> */}
-      <Content>{children}</Content>
-      {/* <Footer style={{ textAlign: 'center', background: 'green' }}>
-        Ant Design ©{new Date().getFullYear()} Created by Ant UED
-      </Footer> */}
+      </Sider>
+      <Layout>
+        <Content>
+          <Spin spinning={loading} size="large">
+            {children}
+          </Spin>
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>
+          Ant Design ©{new Date().getFullYear()} Created by Ant UED
+        </Footer>
+      </Layout>
     </Layout>
   );
 };

@@ -60,3 +60,15 @@ const SomeDiv = styled.div`
   `}
 `;
 */
+
+export default class Media {
+  static SIZE = sizes;
+
+  static greaterThan(windowSize: any) {
+    return `@media only screen and (min-width: ${windowSize}px)`;
+  }
+
+  static lessThan(windowSize: any) {
+    return `@media only screen and (max-width: ${windowSize - 1}px)`;
+  }
+}
