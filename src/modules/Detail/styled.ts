@@ -4,6 +4,7 @@ const Wrapper = styled.div`
   /* display: flex; */
   padding: 16px;
   display: flex;
+  gap: 8px;
 `;
 
 const Title = styled.div`
@@ -20,8 +21,15 @@ const Login = styled.span`
 `;
 
 const Left = styled.div`
-  width: 480px;
-  height: 480px;
+  width: 30%;
+  height: 30%;
+`;
+
+const Infomation = styled.div`
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  /* height: 480px; */
 `;
 
 const Form = styled.div`
@@ -35,11 +43,12 @@ const Form = styled.div`
 
 const Right = styled.div`
   display: flex;
-  width: 55%;
-  height: 100%;
+  width: 30%;
   flex-direction: column;
-  align-items: center;
-  background: ${({ theme }) => theme.btnPrimary};
+  gap: 16px;
+  /* justify-content: center;
+  align-items: center; */
+  /* background: ${({ theme }) => theme.btnPrimary}; */
 `;
 
-export { Wrapper, Title, Login, Left, Form, Right };
+export { Wrapper, Title, Login, Left, Form, Right, Infomation };
