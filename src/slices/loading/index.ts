@@ -29,7 +29,7 @@ export const useLoading = () => {
   const loading = useSelector(selectLoading);
 
   const setLoading = (payload) => dispatch(actions.setLoading(payload));
-  return { setLoading, loading };
+  return { setLoading, ...loading };
 };
 
 // export default slice;

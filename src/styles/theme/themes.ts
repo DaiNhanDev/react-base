@@ -12,7 +12,7 @@ const lightTheme = {
   background: 'rgba(255,255,255,1)',
   backgroundVariant: 'rgba(251,249,249,1)',
 
-  btnPrimary: 'linear-gradient(to left top, #0E1F40, #FF3E9D)',
+  btnPrimary: '#f53d2d',
   border: 'rgba(58,52,51,0.12)',
   borderLight: 'rgba(58,52,51,0.05)',
   FF3E9D: '#FF3E9D',
@@ -36,8 +36,7 @@ const darkTheme: Theme = {
   background: 'rgba(0,0,0,1)',
   backgroundVariant: 'rgba(28,26,26,1)',
 
-  btnPrimary:
-    'linear-gradient(to left top, #845EC2, #9a9ae1, #46eefa, #DD83E0)',
+  btnPrimary: '#f53d2d',
 
   border: 'rgba(241,233,231,0.15)',
   borderLight: 'rgba(241,233,231,0.05)',

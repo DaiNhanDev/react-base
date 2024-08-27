@@ -1,18 +1,21 @@
 import HomeLayout from 'layouts/HomeLayout/home';
-import { Categories } from 'modules/Categories/Loadable';
+// import { Categories } from 'modules/Categories/Loadable';
+import { Auctions } from 'modules/Auctions/Loadable';
+
 import { Detail } from 'modules/Detail/Loadable';
 
 export const RoutesName = {
   LOGIN: '/login',
   HOME: '/',
   CATEGORIES: '/',
+  AUCTIONS: '/',
   DETAIL: '/detail/:id',
 };
 
 export const PUBLIC_ROUTES = [
   {
-    path: RoutesName.CATEGORIES,
-    component: Categories,
+    path: RoutesName.AUCTIONS,
+    component: Auctions,
     layout: HomeLayout,
     exact: true,
   },

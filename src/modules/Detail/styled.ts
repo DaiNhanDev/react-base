@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  /* display: flex; */
+  padding: 16px;
   display: flex;
-  flex-direction: row;
+  gap: 8px;
 `;
 
 const Title = styled.div`
@@ -21,12 +21,15 @@ const Login = styled.span`
 `;
 
 const Left = styled.div`
+  width: 30%;
+  height: 30%;
+`;
+
+const Infomation = styled.div`
+  width: 40%;
   display: flex;
-  width: 45%;
-  height: 100%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* height: 480px; */
 `;
 
 const Form = styled.div`
@@ -40,11 +43,12 @@ const Form = styled.div`
 
 const Right = styled.div`
   display: flex;
-  width: 55%;
-  height: 100%;
+  width: 30%;
   flex-direction: column;
-  align-items: center;
-  background: ${({ theme }) => theme.btnPrimary};
+  gap: 16px;
+  /* justify-content: center;
+  align-items: center; */
+  /* background: ${({ theme }) => theme.btnPrimary}; */
 `;
 
-export { Wrapper, Title, Login, Left, Form, Right };
+export { Wrapper, Title, Login, Left, Form, Right, Infomation };
