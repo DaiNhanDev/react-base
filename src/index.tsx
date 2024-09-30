@@ -1,67 +1,42 @@
-/**
- * index.tsx
- *
- * This is the entry file for the application, only setup and boilerplate
- * code.
- */
-
-import ReactDOM from 'react-dom/client';
-// import { Switch, BrowserRouter, Router } from 'react-router-dom';
-import { GlobalStyle } from 'styles/global-styles';
-import { ConnectedRouter } from 'connected-react-router';
-
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import './i18n';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import 'config/config';
 import { Provider } from 'react-redux';
-
-import { HelmetProvider } from 'react-helmet-async';
-
+// import { store } from 'store/store';
+import { createRoot } from 'react-dom/client';
+import React from 'react';
 import { configureAppStore } from 'store/configureStore';
-import { history } from 'store/reducers';
+// import 'antd.variable.min.css';
+// interface EventTarget {
+//   state?: 'activated';
+// }
 
-import { ThemeProvider } from 'styles/theme/ThemeProvider';
-
-import reportWebVitals from 'reportWebVitals';
-
-import { App } from './app/index';
-
-// Initialize languages
-import './locales/i18n';
-
-// // Observe loading of Inter (to remove 'Inter', remove the <link> tag in
-// // the index.html file and this observer)
-// const openSansObserver = new FontFaceObserver('Inter', {});
-
-// // When Inter is loaded, add a font-family using Inter to the body
-// openSansObserver.load().then(() => {
-//   document.body.classList.add('fontLoaded');
-//   console.log('======> NEXT');
-// }, () =>{
-//   console.log('====> ERROR');
-// });
-
+const container = document.getElementById('root') as HTMLElement;
+const root = createRoot(container);
 const store = configureAppStore(history);
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement,
-);
 root.render(
-  <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <ThemeProvider>
-        <HelmetProvider>
-          <GlobalStyle />
-          <App />
-        </HelmetProvider>
-      </ThemeProvider>
-    </ConnectedRouter>
-  </Provider>,
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
 );
 
-// Hot reloadable translation json files
-// if (module.hot) {
-//   module.hot.accept(['./locales/i18n'], () => {
-//     // No need to render the App again because i18next works with the hooks
-//   });
-// }
+// serviceWorkerRegistration.register({
+//   onUpdate: (registration) => {
+//     const waitingServiceWorker = registration.waiting;
+
+//     if (waitingServiceWorker) {
+//       waitingServiceWorker.addEventListener('statechange', (event) => {
+//         if ((event.target as EventTarget).state === 'activated') window.location.reload();
+//       });
+//       waitingServiceWorker.postMessage({ type: 'SKIP_WAITING' });
+//     }
+//   },
+// }); // app will reload if new version of app is available
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

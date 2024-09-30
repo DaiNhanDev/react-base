@@ -33,7 +33,7 @@ export const useBroadcast = () => {
 
   const setBroadcastChannel = (payload: { broadcast: BroadcastChannel }) =>
     dispatch(actions.setBroadcastChannel(payload));
-  const state = useSelector(selectBroadcast);
+  const state: BroadcastState = useSelector(selectBroadcast);
 
   return {
     setBroadcastChannel,

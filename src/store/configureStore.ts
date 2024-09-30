@@ -1,5 +1,4 @@
 import { configureStore, StoreEnhancer } from '@reduxjs/toolkit';
-import { routerMiddleware } from 'connected-react-router';
 import { createInjectorsEnhancer } from 'redux-injectors';
 import createSagaMiddleware from 'redux-saga';
 import loggerMiddleware from 'redux-logger';
@@ -22,7 +21,7 @@ export function configureAppStore(history) {
       getDefaultMiddleware({
         thunk: false,
         serializableCheck: false,
-      }).concat(routerMiddleware(history), sagaMiddleware, loggerMiddleware),
+      }).concat(sagaMiddleware, loggerMiddleware),
     devTools: process.env.NODE_ENV !== 'production',
     enhancers: (getDefaultEnhancers) => getDefaultEnhancers().concat(enhancers),
   });

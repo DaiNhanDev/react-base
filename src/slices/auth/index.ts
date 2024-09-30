@@ -1,52 +1,34 @@
-import { PayloadAction, createAction } from '@reduxjs/toolkit';
+import { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from 'utils/@reduxjs/toolkit';
 import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
-import { useSelector, useDispatch } from 'react-redux';
-import { LOCATION_CHANGE } from 'connected-react-router';
+import { useDispatch } from 'react-redux';
+import { initialStates } from 'slices/initialStates';
+import { useSelectorData } from 'slices/selectors';
 
-import { UserModel } from 'models';
 import { saga } from './saga';
+import { ResetPasswordRequest, SignUpRequest } from 'apis/auth.api';
 import { AuthState } from './types';
-import { selectAuth } from './selectors';
 
-export const initialState: AuthState = {
-  loading: false,
-  authenticated: false,
-  user_profile: null,
-};
-
-const locationChange = createAction(LOCATION_CHANGE);
+const name = 'auth';
+const initialState: AuthState = initialStates[name];
 const slice = createSlice({
-  name: 'auth',
+  name,
   initialState,
   reducers: {
-    login: (
+    doLogin: (
       state,
       action: PayloadAction<{ email: string; password: string }>,
-    ) => {
-      state.loading = true;
-    },
-    loginSuccess: (state) => {
-      state.authenticated = true;
-    },
-    getMe: (state) => {
-      state.loading = true;
-    },
-    getMeSuccess: (state, action: PayloadAction<UserModel>) => {
-      state.loading = false;
-      state.authenticated = true;
-      state.user_profile = action.payload;
-    },
-    logout: (state) => {
-      state.loading = false;
-      state.user_profile = null;
-    },
-  },
-  extraReducers: (builder) => {
-    builder.addCase(locationChange, (state, action: PayloadAction<any>) => {
-      console.log('====> action', action.payload.location.pathname);
-      console.log('====> state', state);
-    });
+    ) => {},
+    doLoginSuccess: (state) => {},
+    doResetPassword: (state, action: PayloadAction<ResetPasswordRequest>) => {},
+    doResetPasswordSuccess: (state) => {},
+    doSignUp: (state, action: PayloadAction<SignUpRequest>) => { },
+    doSignUpSuccess: (state) => {},
+    doVerifySecurityCode: (state, action: PayloadAction<SignUpRequest>) => { },
+    doVerifySecurityCodeSuccess: (state) => {},
+    doSetNewPassword: (state, action: PayloadAction<SignUpRequest>) => { },
+    doSetNewPasswordSuccess: (state) => {},
+    doLogout: (state) => {},
   },
 });
 
@@ -59,14 +41,12 @@ export const useAuth = () => {
   useInjectSaga({ key: slice.name, saga });
   const dispatch = useDispatch();
 
-  const login = (payload: { email: string; password: string }) =>
-    dispatch(actions.login(payload));
-  const getMe = () => dispatch(actions.getMe());
-  const state = useSelector(selectAuth);
+  const doLogin = (payload: { email: string; password: string }) =>
+    dispatch(actions.doLogin(payload));
+  const state = useSelectorData(name) as AuthState;
 
   return {
-    login,
-    getMe,
+    doLogin,
     ...state,
   };
 };

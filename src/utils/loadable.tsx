@@ -1,9 +1,16 @@
 import React, { lazy, Suspense } from 'react';
+import { Loading } from 'components/common/Loading/Loading';
+import styled from 'styled-components';
 
-interface Opts {
-  fallback: React.ReactNode;
-}
 type Unpromisify<T> = T extends Promise<infer P> ? P : never;
+
+const LoadingWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const lazyLoad = <
   T extends Promise<any>,
@@ -11,7 +18,6 @@ export const lazyLoad = <
 >(
   importFunc: () => T,
   selectorFunc?: (s: Unpromisify<T>) => U,
-  opts: Opts = { fallback: null },
 ) => {
   let lazyFactory: () => Promise<{ default: U }> = importFunc;
 
@@ -23,7 +29,13 @@ export const lazyLoad = <
   const LazyComponent = lazy(lazyFactory);
 
   return (props: React.ComponentProps<U>): JSX.Element => (
-    <Suspense fallback={opts.fallback!}>
+    <Suspense
+      fallback={
+        <LoadingWrapper>
+          <Loading />
+        </LoadingWrapper>
+      }
+    >
       <LazyComponent {...props} />
     </Suspense>
   );

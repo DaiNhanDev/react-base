@@ -4,9 +4,8 @@ import axios, {
   InternalAxiosRequestConfig,
   AxiosResponse,
 } from 'axios';
+import { BASE_URL } from 'constants/index';
 import { STORAGE, getLocalStorage, removeLocalStorage } from 'utils/storage';
-
-const BASE_URL = 'http://localhost:8083/api/v1';
 
 // For Make Log on Develop Mode
 const logOnDev = (message: string) => {
@@ -28,7 +27,6 @@ const getToken = () => {
   const userToken = getLocalStorage(STORAGE.USER_TOKEN);
   return userToken || '';
 };
-
 const requestConfig = {
   baseURL: BASE_URL,
   timeout: 10000, // 10s
@@ -48,25 +46,27 @@ const onRequest = (
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
-  console.log('🚀 [API] CONFIG: ', config);
+  // console.log('🚀 [API] CONFIG: ', config);
 
   return config;
 };
 
 const onResponse = (response: AxiosResponse): AxiosResponse => {
-  const { method, url } = response.config;
-  const { status } = response;
+  // const { method, url } = response.config;
+  // const { status } = response;
   // Set Loading End Here
   // Handle Response Data Here
   // Error Handling When Return Success with Error Code Here
-  logOnDev(`🚀 [API] ${method?.toUpperCase()} ${url} | Response ${status}`);
+  // logOnDev(`🚀 [API] ${method?.toUpperCase()} ${url} | Response ${status}`);
 
   return response.data;
 };
 
-const onErrorResponse = (error: AxiosError | Error): Promise<AxiosError> => {
+const onErrorResponse = (
+  error: AxiosError | Error,
+): Promise<AxiosError | Error> => {
   if (axios.isAxiosError(error)) {
-    console.log('🚀 [API] ERROR: ', { error });
+    // console.log('🚀 [API] ERROR: ', { error });
     const { response } = error;
     // const { method, url } = error.config as AxiosRequestConfig;
     const {

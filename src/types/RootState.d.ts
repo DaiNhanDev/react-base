@@ -1,14 +1,9 @@
-import { RouterState } from 'connected-react-router';
-import { GithubRepoFormState } from 'modules/HomePage/Features/GithubRepoForm/slice/types';
-import { UsersState } from 'slices/users/types';
-import { ThemeState } from 'slices/theme/types';
 import { AuthState } from 'slices/auth/types';
+import { BroadcastState } from 'slices/broadcast/types';
 import { ErrorState } from 'slices/errors/types';
 import { LoadingState } from 'slices/loading/types';
-import { InvoiceState } from 'slices/invoice/types';
-import { BroadcastState } from 'slices/broadcast/types';
-import { JancodeState } from 'slices/jancode/types';
-import { AuctionsState } from 'slices/auctions/types';
+import { ThemeState } from 'slices/theme/types';
+import { UserState } from 'slices/user/types';
 
 /* 
   Because the redux-injectors injects your reducers asynchronously somewhere in your code
@@ -17,15 +12,11 @@ import { AuctionsState } from 'slices/auctions/types';
   So, not available always
 */
 export interface RootState {
-  theme: ThemeState;
+  auth: AuthState;
+  broadcast: BroadcastState;
   errors: ErrorState;
   loading: LoadingState;
-  auth: AuthState;
-  githubRepoForm: GithubRepoFormState;
-  users: UsersState;
-  invoice: InvoiceState;
-  broadcast: BroadcastState;
-  jancode: JancodeState;
-  router: RouterState;
-  auctions: AuctionsState;
+  // toast: NotificationState;
+  theme: ThemeState;
+  user: UserState;
 }

@@ -1,25 +1,24 @@
 import * as React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { NavBar } from 'components/NavBar';
-import { PageWrapper } from 'components/PageWrapper';
-import { useHistory } from 'react-router-dom';
-import { Features } from './Features';
+import { Button, Flex } from 'antd';
+import { FormProvider, useForm } from 'react-hook-form';
+import { SearchOutlined } from '@ant-design/icons';
 
 export const HomePage: React.FC = () => {
-  const history = useHistory();
+  const form = useForm({
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+    reValidateMode: 'onChange',
+    mode: 'all',
+  });
   return (
-    <>
-      <Helmet>
-        <title>Home Page</title>
-        <meta name="description" content="" />
-      </Helmet>
-      <NavBar />
-      <PageWrapper>
-        <button type="button" onClick={() => history.push('/login')}>
-          onClick
-        </button>
-        <Features />
-      </PageWrapper>
-    </>
+    <FormProvider {...form}>
+      <Flex gap={24}>
+        <Button type="primary" icon={<SearchOutlined />}>
+          Search
+        </Button>
+      </Flex>
+    </FormProvider>
   );
 };

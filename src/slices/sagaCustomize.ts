@@ -7,9 +7,9 @@ export function* sagaCustomize(callbackAction) {
   try {
     yield put(loadingActions.setLoading(true));
     yield callbackAction();
-    yield put(loadingActions.setLoading(false));
-  } catch (error: AxiosError | any) {
+  } catch (error: AxiosError | unknown) {
     yield put(errorActions.setError(error));
+  } finally {
     yield put(loadingActions.setLoading(false));
   }
 }

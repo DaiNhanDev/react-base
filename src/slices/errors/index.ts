@@ -2,19 +2,20 @@ import { AxiosError } from 'axios';
 import { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from 'utils/@reduxjs/toolkit';
 import { useInjectReducer } from 'utils/redux-injectors';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { initialStates } from 'slices/initialStates';
+import { useSelectorData } from 'slices/selectors';
 import { ErrorState } from './types';
-import { selectError } from './selectors';
 
 export const initialState: ErrorState = {
   error: null,
 };
-
+const name = 'errors';
 const slice = createSlice({
-  name: 'errors',
-  initialState,
+  name,
+  initialState: initialStates[name],
   reducers: {
-    setError(state, action: PayloadAction<AxiosError | null>) {
+    setError(state, action: PayloadAction<AxiosError | unknown>) {
       state.error = action.payload;
     },
   },
@@ -28,10 +29,10 @@ export const useError = () => {
   useInjectReducer({ key: name, reducer });
   const dispatch = useDispatch();
 
-  const error = useSelector(selectError);
+  const error: ErrorState = useSelectorData(name) as ErrorState;
 
   const setError = (payload) => dispatch(actions.setError(payload));
-  return { setError, error };
+  return { setError, ...error };
 };
 
 export default slice;
