@@ -72,7 +72,7 @@ export const Values = styled.div`
   display: flex;
   align-items: center;
   margin-left: 0.5rem;
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 
   ${Media.md()} {
     margin-left: 1.5rem;

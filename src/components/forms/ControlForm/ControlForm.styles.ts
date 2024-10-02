@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { FONT_SIZE, FONT_WEIGHT } from 'styles/themes/constants';
 
 export const UserList = styled(BaseForm.Item)`
@@ -11,7 +11,7 @@ export const UserList = styled(BaseForm.Item)`
 `;
 
 export const Text = styled.div`
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
   font-size: ${FONT_SIZE.md};
   font-weight: ${FONT_WEIGHT.semibold};
 `;

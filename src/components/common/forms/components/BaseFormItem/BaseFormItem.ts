@@ -11,14 +11,14 @@ export type BaseFormItemProps = FormItemProps;
 
 export const BaseFormItem = styled(Form.Item)<InternalFormItemProps>`
   .ant-form-item-label > label {
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
   }
 
   .ant-input-group-addon:first-of-type {
     font-weight: 600;
     width: 5rem;
 
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
 
     .anticon,
     svg {
@@ -54,7 +54,7 @@ export const BaseFormItem = styled(Form.Item)<InternalFormItemProps>`
       align-items: center;
       justify-content: center;
       margin: 0 0.25rem;
-      color: ${({theme}) => theme.antd.colorTextSecondary};
+      color: ${({ theme }) => theme.antd.colorTextSecondary};
       background: var(--error-color);
       border-radius: 50%;
       width: 1rem;

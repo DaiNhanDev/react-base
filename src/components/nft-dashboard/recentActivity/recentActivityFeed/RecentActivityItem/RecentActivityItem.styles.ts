@@ -24,9 +24,9 @@ export const IconWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  color: ${({theme}) => theme.antd.colorTextSecondary};
+  color: ${({ theme }) => theme.antd.colorTextSecondary};
 
-  background-color: ${({theme}) => theme.antd.colorPrimary};
+  background-color: ${({ theme }) => theme.antd.colorPrimary};
 
   font-size: ${FONT_SIZE.xs};
 `;

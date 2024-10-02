@@ -13,7 +13,7 @@ export const ProfileDropdownHeader = styled(HeaderActionWrapper)`
 `;
 
 export const DownArrow = styled(DownOutlined)`
-  color: ${({theme}) => theme.antd.colorTextSecondary};
+  color: ${({ theme }) => theme.antd.colorTextSecondary};
 
   ${Media.md()} {
     color: var(--text-main-color);

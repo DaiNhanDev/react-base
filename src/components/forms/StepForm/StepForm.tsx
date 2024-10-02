@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';
 import { Step1 } from './Steps/Step1';
 import { Step2 } from './Steps/Step2';

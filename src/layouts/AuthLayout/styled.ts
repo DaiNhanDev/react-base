@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { LeftOutlined } from '@ant-design/icons';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
-import { BaseInput as CommonInput } from 'components/common/inputs/BaseInput/BaseInput';
-import { InputPassword as CommonInputPassword } from 'components/common/inputs/InputPassword/InputPassword';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
+import { BaseInput as CommonInput } from 'components/common/Inputs/BaseInput/BaseInput';
+import { InputPassword as CommonInputPassword } from 'components/common/Inputs/InputPassword/InputPassword';
 import loginBackground from 'assets/images/login-bg.webp';
 import {
   BORDER_RADIUS,
@@ -58,7 +58,7 @@ export const FormWrapper = styled.div`
 `;
 
 export const FormTitle = styled.div`
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 
   ${Media.md()} {
     margin-bottom: 0.625rem;
@@ -107,7 +107,7 @@ export const FormItem = styled(BaseForm.Item)`
   }
 
   & label {
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
     font-size: ${FONT_SIZE.xs};
     line-height: 1.25rem;
   }
@@ -149,7 +149,7 @@ export const Text = styled.span`
 
 export const LinkText = styled(Text)`
   text-decoration: underline;
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 `;
 
 export const SubmitButton = styled(BaseButton)`
@@ -161,8 +161,8 @@ export const SubmitButton = styled(BaseButton)`
 export const SocialButton = styled(BaseButton)`
   font-size: ${FONT_SIZE.md};
   font-weight: ${FONT_WEIGHT.semibold};
-  color: ${({theme}) => theme.antd.colorPrimary};
-  border: 1px solid ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
+  border: 1px solid ${({ theme }) => theme.antd.colorPrimary};
   width: 100%;
   margin-top: 1rem;
   display: flex;

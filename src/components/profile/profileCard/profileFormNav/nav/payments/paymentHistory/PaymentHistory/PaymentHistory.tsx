@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { BaseCard } from 'components/common/BaseCard/BaseCard';
 import { Payment } from 'components/profile/profileCard/profileFormNav/nav/payments/paymentHistory/Payment/Payment';
 import { PaymentsTable } from 'components/profile/profileCard/profileFormNav/nav/payments/paymentHistory/PaymentsTable/PaymentsTable';

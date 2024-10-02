@@ -1,12 +1,8 @@
 import { useEffect, useRef } from 'react';
-// import { useAppSelector } from './reduxHooks';
-import { ConfigProvider } from 'antd';
-import { themeObject } from 'styles/themes/themeVariables';
 import { useThemeSlice } from 'slices';
 
 export const useThemeWatcher = (): void => {
-  // const theme = useAppSelector((state) => state.theme.theme);
-  const { theme } = useThemeSlice()
+  const { themeKey } = useThemeSlice();
 
   const root = useRef(document.querySelector(':root'));
 
@@ -14,21 +10,11 @@ export const useThemeWatcher = (): void => {
     const html = root.current;
     if (html) {
       html.setAttribute('data-no-transition', '');
-      html.setAttribute('data-theme', theme);
+      html.setAttribute('data-theme', themeKey);
       // remove transition after layout update
       requestAnimationFrame(() => {
         html.removeAttribute('data-no-transition');
       });
     }
-
-    // ConfigProvider.config({
-    //   theme: {
-    //     primaryColor: themeObject[theme].primary,
-    //     infoColor: themeObject[theme].primary,
-    //     successColor: themeObject[theme].success,
-    //     errorColor: themeObject[theme].error,
-    //     warningColor: themeObject[theme].warning,
-    //   },
-    // });
-  }, [theme]);
+  }, [themeKey]);
 };

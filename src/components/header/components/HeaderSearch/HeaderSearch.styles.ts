@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { SearchOutlined } from '@ant-design/icons';
 import { BaseModal } from 'components/common/BaseModal/BaseModal';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';
-import { SearchInput } from 'components/common/inputs/SearchInput/SearchInput';
+import { SearchInput } from 'components/common/Inputs/SearchInput/SearchInput';
 import { BORDER_RADIUS, Media } from 'styles/themes/constants';
 
 export const SearchIcon = styled(SearchOutlined)`

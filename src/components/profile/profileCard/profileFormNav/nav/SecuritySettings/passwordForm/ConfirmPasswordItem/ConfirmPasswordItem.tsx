@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
-import { InputPassword } from 'components/common/inputs/InputPassword/InputPassword';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
+import { InputPassword } from 'components/common/Inputs/InputPassword/InputPassword';
 
 export const ConfirmItemPassword: React.FC = () => {
   const { t } = useTranslation();

@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 import { CardTheme, cardThemes } from 'constants/cardThemes';
 import { PaymentCard } from 'interfaces/interfaces';
 import * as S from './CardThemeItem.styles';

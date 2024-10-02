@@ -19,7 +19,7 @@ export const StoriesModal = styled(BaseModal)`
     z-index: 999999;
     top: 1rem;
 
-    color: ${({theme}) => theme.antd.colorTextSecondary};
+    color: ${({ theme }) => theme.antd.colorTextSecondary};
   }
 `;
 

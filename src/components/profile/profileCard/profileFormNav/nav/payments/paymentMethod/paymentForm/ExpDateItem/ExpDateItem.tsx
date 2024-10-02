@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import MaskedInput from 'antd-mask-input';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 import { CardInputProps } from 'components/profile/profileCard/profileFormNav/nav/payments/paymentMethod/paymentForm/interfaces';
 
 export const ExpDateItem: React.FC<CardInputProps> = ({

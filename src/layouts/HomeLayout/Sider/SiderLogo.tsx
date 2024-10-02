@@ -5,6 +5,7 @@ import { useResponsive } from 'hooks/useResponsive';
 import logo from 'assets/logo.png';
 import logoDark from 'assets/logo-dark.png';
 import { useAppSelector } from 'hooks/reduxHooks';
+import { useThemeSlice } from 'slices';
 
 interface SiderLogoProps {
   isSiderCollapsed: boolean;
@@ -16,9 +17,9 @@ export const SiderLogo: React.FC<SiderLogoProps> = ({
 }) => {
   const { tabletOnly } = useResponsive();
 
-  const theme = useAppSelector((state) => state.theme.theme);
+  const { themeKey } = useThemeSlice();
 
-  const img = theme === 'dark' ? logoDark : logo;
+  const img = themeKey === 'dark' ? logoDark : logo;
 
   return (
     <S.SiderLogoDiv>

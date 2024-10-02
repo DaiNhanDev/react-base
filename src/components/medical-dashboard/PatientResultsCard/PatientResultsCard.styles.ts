@@ -13,7 +13,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const CalendarIcon = styled(CalendarOutlined)`
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 
   ${Media.md()} {
     color: var(--text-main-color);
@@ -68,12 +68,12 @@ export const IconWrapper = styled.div<IconProps>`
   ${(props) =>
     props.isActive
       ? css`
-          background-color: ${({theme}) => theme.antd.colorPrimary};
-          color: ${({theme}) => theme.antd.colorTextSecondary};
+          background-color: ${({ theme }) => theme.antd.colorPrimary};
+          color: ${({ theme }) => theme.antd.colorTextSecondary};
         `
       : css`
           background-color: var(--timeline-background-color);
-          color: ${({theme}) => theme.antd.colorPrimary};
+          color: ${({ theme }) => theme.antd.colorPrimary};
         `}
   font-size: 1.15rem;
 `;

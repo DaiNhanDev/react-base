@@ -37,7 +37,7 @@ export const Event = styled.div<Event>`
           color: var(--text-main-color);
         `
       : css`
-          color: ${({theme}) => theme.antd.colorPrimary};
+          color: ${({ theme }) => theme.antd.colorPrimary};
         `};
 
   border-radius: ${BORDER_RADIUS};
@@ -61,7 +61,7 @@ export const Calendar = styled(AntCalendar)`
 
     font-size: ${FONT_SIZE.xs};
 
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
   }
 
   .ant-picker-cell {
@@ -77,7 +77,7 @@ export const Calendar = styled(AntCalendar)`
       .ant-picker-cell-inner {
         box-shadow: 0 5px 15px rgba(0, 89, 171, 0.3);
 
-        background: ${({theme}) => theme.antd.colorPrimary};
+        background: ${({ theme }) => theme.antd.colorPrimary};
 
         .ant-picker-calendar-date-value,
         ${Event} {
@@ -85,7 +85,7 @@ export const Calendar = styled(AntCalendar)`
         }
 
         .ant-picker-calendar-date-content > div {
-          background: ${({theme}) => theme.antd.colorPrimary};
+          background: ${({ theme }) => theme.antd.colorPrimary};
         }
       }
     }

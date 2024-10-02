@@ -32,19 +32,19 @@ export const SearchInput = styled(BaseInput.Search)`
 
   .ant-input-group-addon {
     min-width: 5.5rem;
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
     font-weight: ${FONT_WEIGHT.semibold};
     font-size: ${FONT_SIZE.lg};
   }
 
   .ant-input-search-button {
     &.ant-btn .anticon {
-      color: ${({theme}) => theme.antd.colorPrimary};
+      color: ${({ theme }) => theme.antd.colorPrimary};
     }
     width: 100%;
     background-color: rgba(1, 80, 154, 0.05);
     border: 1px solid var(--border-color);
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
   }
 `;
 

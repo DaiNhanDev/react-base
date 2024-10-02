@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import * as S from './ForgotPasswordForm.styles';
-import * as Auth from 'components/layouts/AuthLayout/AuthLayout.styles';
+import * as Auth from 'layouts/AuthLayout/styled';
 import { useAppDispatch } from 'hooks/reduxHooks';
 import { doResetPassword } from 'store/slices/authSlice';
 import { notificationController } from 'controllers/notificationController';

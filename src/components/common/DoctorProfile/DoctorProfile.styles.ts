@@ -24,7 +24,7 @@ export const Text = styled(BaseTypography.Text)`
 `;
 
 export const Title = styled(Text)`
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 `;
 
 export const Rating = styled(BaseRate)`

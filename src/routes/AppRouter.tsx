@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from 'layouts/HomeLayout/MainLayout';
 import RequireAuth from './RequireAuth';
 
-const AuthLayout = React.lazy(() => import('components/layouts/AuthLayout/AuthLayout'));
+const AuthLayout = React.lazy(() => import('layouts/AuthLayout'));
 import LoginPage from 'pages/LoginPage';
 import SignUpPage from 'pages/SignUpPage';
 import ForgotPasswordPage from 'pages/ForgotPasswordPage';
@@ -27,36 +27,92 @@ const ServerErrorPage = React.lazy(() => import('pages/ServerErrorPage'));
 const Error404Page = React.lazy(() => import('pages/Error404Page'));
 const AdvancedFormsPage = React.lazy(() => import('pages/AdvancedFormsPage'));
 const PersonalInfoPage = React.lazy(() => import('pages/PersonalInfoPage'));
-const SecuritySettingsPage = React.lazy(() => import('pages/SecuritySettingsPage'));
+const SecuritySettingsPage = React.lazy(
+  () => import('pages/SecuritySettingsPage'),
+);
 const NotificationsPage = React.lazy(() => import('pages/NotificationsPage'));
 const PaymentsPage = React.lazy(() => import('pages/PaymentsPage'));
-const ButtonsPage = React.lazy(() => import('pages/uiComponentsPages/ButtonsPage'));
-const SpinnersPage = React.lazy(() => import('pages/uiComponentsPages/SpinnersPage'));
-const AvatarsPage = React.lazy(() => import('pages/uiComponentsPages/dataDisplay/AvatarsPage'));
-const BadgesPage = React.lazy(() => import('pages/uiComponentsPages/dataDisplay/BadgesPage'));
-const CollapsePage = React.lazy(() => import('pages/uiComponentsPages/dataDisplay/CollapsePage'));
-const PaginationPage = React.lazy(() => import('pages/uiComponentsPages/dataDisplay/PaginationPage'));
-const ModalsPage = React.lazy(() => import('pages/uiComponentsPages/modals/ModalsPage'));
-const PopoversPage = React.lazy(() => import('pages/uiComponentsPages/modals/PopoversPage'));
-const PopconfirmsPage = React.lazy(() => import('pages/uiComponentsPages/modals/PopconfirmsPage'));
-const ProgressPage = React.lazy(() => import('pages/uiComponentsPages/feedback/ProgressPage'));
-const ResultsPage = React.lazy(() => import('pages/uiComponentsPages/feedback/ResultsPage'));
-const AlertsPage = React.lazy(() => import('pages/uiComponentsPages/feedback/AlertsPage'));
-const SkeletonsPage = React.lazy(() => import('pages/uiComponentsPages/feedback/SkeletonsPage'));
-const InputsPage = React.lazy(() => import('pages/uiComponentsPages/forms/InputsPage'));
-const CheckboxesPage = React.lazy(() => import('pages/uiComponentsPages/forms/CheckboxesPage'));
-const RadiosPage = React.lazy(() => import('pages/uiComponentsPages/forms/RadiosPage'));
-const SelectsPage = React.lazy(() => import('pages/uiComponentsPages/forms/SelectsPage'));
-const SwitchesPage = React.lazy(() => import('pages/uiComponentsPages/forms/SwitchesPage'));
-const UploadsPage = React.lazy(() => import('pages/uiComponentsPages/forms/UploadsPage'));
-const RatesPage = React.lazy(() => import('pages/uiComponentsPages/forms/RatesPage'));
-const AutoCompletesPage = React.lazy(() => import('pages/uiComponentsPages/forms/AutoCompletesPage'));
-const StepsPage = React.lazy(() => import('pages/uiComponentsPages/forms/StepsPage'));
-const DateTimePickersPage = React.lazy(() => import('pages/uiComponentsPages/forms/DateTimePickersPage'));
-const DropdownsPage = React.lazy(() => import('pages/uiComponentsPages/DropdownsPage'));
-const BreadcrumbsPage = React.lazy(() => import('pages/uiComponentsPages/navigation/BreadcrumbsPage'));
-const TabsPage = React.lazy(() => import('pages/uiComponentsPages/navigation/TabsPage'));
-const NotificationsUIPage = React.lazy(() => import('pages/uiComponentsPages/feedback/NotificationsPage'));
+const ButtonsPage = React.lazy(
+  () => import('pages/uiComponentsPages/ButtonsPage'),
+);
+const SpinnersPage = React.lazy(
+  () => import('pages/uiComponentsPages/SpinnersPage'),
+);
+const AvatarsPage = React.lazy(
+  () => import('pages/uiComponentsPages/dataDisplay/AvatarsPage'),
+);
+const BadgesPage = React.lazy(
+  () => import('pages/uiComponentsPages/dataDisplay/BadgesPage'),
+);
+const CollapsePage = React.lazy(
+  () => import('pages/uiComponentsPages/dataDisplay/CollapsePage'),
+);
+const PaginationPage = React.lazy(
+  () => import('pages/uiComponentsPages/dataDisplay/PaginationPage'),
+);
+const ModalsPage = React.lazy(
+  () => import('pages/uiComponentsPages/modals/ModalsPage'),
+);
+const PopoversPage = React.lazy(
+  () => import('pages/uiComponentsPages/modals/PopoversPage'),
+);
+const PopconfirmsPage = React.lazy(
+  () => import('pages/uiComponentsPages/modals/PopconfirmsPage'),
+);
+const ProgressPage = React.lazy(
+  () => import('pages/uiComponentsPages/feedback/ProgressPage'),
+);
+const ResultsPage = React.lazy(
+  () => import('pages/uiComponentsPages/feedback/ResultsPage'),
+);
+const AlertsPage = React.lazy(
+  () => import('pages/uiComponentsPages/feedback/AlertsPage'),
+);
+const SkeletonsPage = React.lazy(
+  () => import('pages/uiComponentsPages/feedback/SkeletonsPage'),
+);
+const InputsPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/InputsPage'),
+);
+const CheckboxesPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/CheckboxesPage'),
+);
+const RadiosPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/RadiosPage'),
+);
+const SelectsPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/SelectsPage'),
+);
+const SwitchesPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/SwitchesPage'),
+);
+const UploadsPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/UploadsPage'),
+);
+const RatesPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/RatesPage'),
+);
+const AutoCompletesPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/AutoCompletesPage'),
+);
+const StepsPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/StepsPage'),
+);
+const DateTimePickersPage = React.lazy(
+  () => import('pages/uiComponentsPages/forms/DateTimePickersPage'),
+);
+const DropdownsPage = React.lazy(
+  () => import('pages/uiComponentsPages/DropdownsPage'),
+);
+const BreadcrumbsPage = React.lazy(
+  () => import('pages/uiComponentsPages/navigation/BreadcrumbsPage'),
+);
+const TabsPage = React.lazy(
+  () => import('pages/uiComponentsPages/navigation/TabsPage'),
+);
+const NotificationsUIPage = React.lazy(
+  () => import('pages/uiComponentsPages/feedback/NotificationsPage'),
+);
 const Logout = React.lazy(() => import('./Logout'));
 
 export const NFT_DASHBOARD_PATH = '/';

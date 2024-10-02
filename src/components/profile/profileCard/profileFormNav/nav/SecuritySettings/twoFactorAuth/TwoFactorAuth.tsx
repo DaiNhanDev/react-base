@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { Col, Row } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 import { TwoFactorOptions } from 'components/profile/profileCard/profileFormNav/nav/SecuritySettings/twoFactorAuth/TwoFactorOptions/TwoFactorOptions';
 import { TwoFactorSwitch } from 'components/profile/profileCard/profileFormNav/nav/SecuritySettings/twoFactorAuth/TwoFactorSwitch/TwoFactorSwitch';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';

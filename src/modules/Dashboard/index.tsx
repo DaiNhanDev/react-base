@@ -14,7 +14,7 @@ import { BaseRow } from 'components/common/BaseRow/BaseRow';
 import { BaseCol } from 'components/common/BaseCol/BaseCol';
 
 const Dashboard: React.FC = () => {
-//   const { isDesktop } = useResponsive();
+  //   const { isDesktop } = useResponsive();
 
   const desktopLayout = (
     <BaseRow>
@@ -55,25 +55,25 @@ const Dashboard: React.FC = () => {
     </BaseRow>
   );
 
-//   const mobileAndTabletLayout = (
-//     <BaseRow gutter={[20, 24]}>
-//       <BaseCol span={24}>
-//         <TrendingCreators />
-//       </BaseCol>
+  //   const mobileAndTabletLayout = (
+  //     <BaseRow gutter={[20, 24]}>
+  //       <BaseCol span={24}>
+  //         <TrendingCreators />
+  //       </BaseCol>
 
-//       <BaseCol span={24}>
-//         <RecentlyAddedNft />
-//       </BaseCol>
+  //       <BaseCol span={24}>
+  //         <RecentlyAddedNft />
+  //       </BaseCol>
 
-//       <BaseCol span={24}>
-//         <TrendingCollections />
-//       </BaseCol>
+  //       <BaseCol span={24}>
+  //         <TrendingCollections />
+  //       </BaseCol>
 
-//       <BaseCol span={24}>
-//         <RecentActivity />
-//       </BaseCol>
-//     </BaseRow>
-//   );
+  //       <BaseCol span={24}>
+  //         <RecentActivity />
+  //       </BaseCol>
+  //     </BaseRow>
+  //   );
 
   return (
     <>

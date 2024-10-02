@@ -8,16 +8,16 @@ import {
   SettingOutlined,
   InfoCircleOutlined,
 } from '@ant-design/icons';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
 import { PageTitle } from 'components/common/PageTitle/PageTitle';
 import {
   BaseSelect,
   Option,
 } from 'components/common/selects/BaseSelect/BaseSelect';
-import { SearchInput } from 'components/common/inputs/SearchInput/SearchInput';
-import { InputPassword } from 'components/common/inputs/InputPassword/InputPassword';
-import { ClipboardInput } from 'components/common/inputs/ClipboardInput/ClipboardInput';
-import { OpenURLInput } from 'components/common/inputs/OpenURLInput/OpenURLInput';
+import { SearchInput } from 'components/common/Inputs/SearchInput/SearchInput';
+import { InputPassword } from 'components/common/Inputs/InputPassword/InputPassword';
+import { ClipboardInput } from 'components/common/Inputs/ClipboardInput/ClipboardInput';
+import { OpenURLInput } from 'components/common/Inputs/OpenURLInput/OpenURLInput';
 import * as S from 'pages/uiComponentsPages//UIComponentsPage.styles';
 import { BaseCol } from 'components/common/BaseCol/BaseCol';
 import { BaseTooltip } from 'components/common/BaseTooltip/BaseTooltip';

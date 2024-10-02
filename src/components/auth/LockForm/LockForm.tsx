@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { initValues as loginInitVal } from 'components/auth/LoginForm/LoginForm';
 import { notificationController } from 'controllers/notificationController';
 import { useAppDispatch, useAppSelector } from 'hooks/reduxHooks';
 import { useResponsive } from 'hooks/useResponsive';
 import { Dates } from 'constants/Dates';
 import { doLogin } from 'store/slices/authSlice';
-import * as Auth from 'components/layouts/AuthLayout/AuthLayout.styles';
+import * as Auth from 'layouts/AuthLayout/styled';
 import * as S from './LockForm.styles';
 import { BaseAvatar } from 'components/common/BaseAvatar/BaseAvatar';
 import { useAuth } from 'slices';
@@ -59,7 +59,7 @@ export const LockForm: React.FC = () => {
     setTimeout(() => {
       navigate('/');
       setLoading(false);
-    }, 1000)
+    }, 1000);
   };
 
   return (

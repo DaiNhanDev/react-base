@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FilterIcon } from 'components/common/icons/FilterIcon';
+import { FilterIcon } from 'components/common/Icons/FilterIcon';
 import { SearchOverlay } from './searchOverlay/SearchOverlay/SearchOverlay';
 import { HeaderActionWrapper } from 'components/header/Header.styles';
 import { CategoryComponents } from 'components/header/components/HeaderSearch/HeaderSearch';

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { SmileOutlined, UserOutlined } from '@ant-design/icons';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 import { AddUserFormModal } from './AddUserFormModal';
-import { BaseInput } from '../../common/inputs/BaseInput/BaseInput';
+import { BaseInput } from '../../common/Inputs/BaseInput/BaseInput';
 import { BaseButton } from '../../common/BaseButton/BaseButton';
 import { useTranslation } from 'react-i18next';
 import * as S from './ControlForm.styles';

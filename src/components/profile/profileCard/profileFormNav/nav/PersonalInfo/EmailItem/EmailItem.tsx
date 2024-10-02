@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
-import { BaseFormItemProps } from 'components/common/forms/components/BaseFormItem/BaseFormItem';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseFormItemProps } from 'components/common/Forms/components/BaseFormItem/BaseFormItem';
 
 interface EmailItemProps extends BaseFormItemProps {
   verified?: boolean;

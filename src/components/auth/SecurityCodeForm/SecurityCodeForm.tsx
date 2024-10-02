@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
-import { VerificationCodeInput } from 'components/common/inputs/VerificationCodeInput/VerificationCodeInput';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
+import { VerificationCodeInput } from 'components/common/Inputs/VerificationCodeInput/VerificationCodeInput';
 import { useAppDispatch } from 'hooks/reduxHooks';
 import { doVerifySecurityCode } from 'store/slices/authSlice';
 import { notificationController } from 'controllers/notificationController';
 import VerifyEmailImage from 'assets/images/verify-email.webp';
-import * as Auth from 'components/layouts/AuthLayout/AuthLayout.styles';
+import * as Auth from 'layouts/AuthLayout/styled';
 import * as S from './SecurityCodeForm.styles';
 import { BaseImage } from 'components/common/BaseImage/BaseImage';
 import { BaseSpin } from 'components/common/BaseSpin/BaseSpin';

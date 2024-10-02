@@ -28,7 +28,7 @@ export const useLoading = () => {
   const { actions } = slice;
 
   const loading: LoadingState = useSelectorData(name) as LoadingState;
-  
+
   const setLoading = (payload) => dispatch(actions.setLoading(payload));
   return { setLoading, ...loading };
 };

@@ -2,9 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // no lazy loading for auth pages to avoid flickering
-const AuthLayout = React.lazy(
-  () => import('components/layouts/AuthLayout/AuthLayout'),
-);
+const AuthLayout = React.lazy(() => import('layouts/AuthLayout'));
 import LoginPage from 'pages/LoginPage';
 import SignUpPage from 'pages/SignUpPage';
 import ForgotPasswordPage from 'pages/ForgotPasswordPage';
@@ -12,7 +10,7 @@ import SecurityCodePage from 'pages/SecurityCodePage';
 import NewPasswordPage from 'pages/NewPasswordPage';
 import LockPage from 'pages/LockPage';
 
-import MainLayout from 'components/layouts/main/MainLayout/MainLayout';
+import MainLayout from 'layouts/HomeLayout/MainLayout';
 import ProfileLayout from 'components/profile/ProfileLayout';
 import RequireAuth from 'components/router/RequireAuth';
 import { withLoading } from 'hocs/withLoading.hoc';

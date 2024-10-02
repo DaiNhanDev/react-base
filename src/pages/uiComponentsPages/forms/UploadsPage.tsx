@@ -12,7 +12,7 @@ import { BaseCol } from 'components/common/BaseCol/BaseCol';
 
 const DraggerIconWrapper = styled.div`
   font-size: 4rem;
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 `;
 const DraggerTitle = styled.div`
   font-size: ${FONT_SIZE.xl};

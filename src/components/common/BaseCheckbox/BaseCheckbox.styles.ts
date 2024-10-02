@@ -8,7 +8,7 @@ export const Checkbox = styled(AntdCheckbox)`
     border-radius: 0.1875rem;
     height: 1.25rem;
     width: 1.25rem;
-    border: 1px solid ${({theme}) => theme.antd.colorPrimary};
+    border: 1px solid ${({ theme }) => theme.antd.colorPrimary};
   }
 
   .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner::after {
@@ -25,6 +25,6 @@ export const CheckboxGroup = styled(Group)`
     border-radius: 0.1875rem;
     height: 1.25rem;
     width: 1.25rem;
-    border: 1px solid ${({theme}) => theme.antd.colorPrimary};
+    border: 1px solid ${({ theme }) => theme.antd.colorPrimary};
   }
 `;

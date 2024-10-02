@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { useAppDispatch } from 'hooks/reduxHooks';
 // import { doLogin } from 'store/slices/authSlice';
 import { notificationController } from 'controllers/notificationController';
 import { ReactComponent as FacebookIcon } from 'assets/icons/facebook.svg';
 import { ReactComponent as GoogleIcon } from 'assets/icons/google.svg';
 import * as S from './LoginForm.styles';
-import * as Auth from 'components/layouts/AuthLayout/AuthLayout.styles';
+import * as Auth from 'layouts/AuthLayout/styled';
 import { useAuth } from 'slices';
 
 interface LoginFormData {
@@ -25,7 +25,7 @@ export const LoginForm: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
-  const {doLogin} = useAuth();
+  const { doLogin } = useAuth();
   const [isLoading, setLoading] = useState(false);
 
   const handleSubmit = (values: LoginFormData) => {
@@ -41,7 +41,7 @@ export const LoginForm: React.FC = () => {
     setTimeout(() => {
       navigate('/');
       setLoading(false);
-    }, 1000)
+    }, 1000);
   };
 
   return (

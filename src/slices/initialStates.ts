@@ -1,4 +1,4 @@
-import { getThemeFromStorage } from 'styled';
+import { getThemeFromStorage } from 'styles';
 import { AuthState } from './auth/types';
 import { BroadcastState } from './broadcast/types';
 import { ErrorState } from './errors/types';
@@ -32,7 +32,6 @@ const loading: LoadingState = {
 
 const theme: ThemeState = {
   selected: themeKey,
-  theme: 'light',
 };
 
 const user: UserState = {

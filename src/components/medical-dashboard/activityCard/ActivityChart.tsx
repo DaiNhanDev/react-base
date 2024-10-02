@@ -2,14 +2,14 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   BaseChart,
-  getDefaultTooltipStyles,
-} from 'components/common/charts/BaseChart';
+//  getDefaultTooltipStyles,
+} from 'components/common/Charts/BaseChart';
 import { dashboardPaddings } from 'components/medical-dashboard/DashboardCard/DashboardCard';
 import { useResponsive } from 'hooks/useResponsive';
 import { Dates } from 'constants/Dates';
 import { ChartData, ChartSeriesData } from 'interfaces/interfaces';
 import { useAppSelector } from 'hooks/reduxHooks';
-import { themeObject } from 'styles/themes/themeVariables';
+// import { themeObject } from 'styles/themes/themeVariables';
 import { graphic } from 'echarts';
 
 interface ActivityChartProps {
@@ -17,7 +17,7 @@ interface ActivityChartProps {
 }
 
 export const ActivityChart: React.FC<ActivityChartProps> = ({ data }) => {
-  const theme = useAppSelector((state) => state.theme.theme);
+  // const theme = useAppSelector((state) => state.theme.theme);
 
   const { t } = useTranslation();
 
@@ -56,7 +56,7 @@ export const ActivityChart: React.FC<ActivityChartProps> = ({ data }) => {
       data: days,
       position: 'top',
       axisLabel: {
-        color: themeObject[theme].primary,
+        // color: themeObject[theme].primary,
         fontWeight: 500,
         fontSize: 14,
       },
@@ -66,7 +66,7 @@ export const ActivityChart: React.FC<ActivityChartProps> = ({ data }) => {
       min: 1500,
       axisLabel: {
         formatter: '{value} kcal',
-        color: themeObject[theme].textLight,
+        // color: themeObject[theme].textLight,
         fontWeight: 500,
         fontSize: 14,
       },
@@ -82,7 +82,7 @@ export const ActivityChart: React.FC<ActivityChartProps> = ({ data }) => {
       },
     ],
     tooltip: {
-      ...getDefaultTooltipStyles(themeObject[theme]),
+      // ...getDefaultTooltipStyles(themeObject[theme]),
       trigger: 'axis',
       formatter: (data: ChartSeriesData) => {
         const currentItem = data[0];

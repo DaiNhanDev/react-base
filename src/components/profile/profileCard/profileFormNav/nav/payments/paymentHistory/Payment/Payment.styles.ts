@@ -30,7 +30,8 @@ export const ContentWrapper = styled.div`
     width: 100%;
     height: 1px;
 
-    background-color: 1px solid rgba(${({theme}) => theme.antd.colorPrimary}, 0.3);
+    background-color: 1px solid
+      rgba(${({ theme }) => theme.antd.colorPrimary}, 0.3);
   }
 `;
 
@@ -49,7 +50,7 @@ export const Subtitle = styled(BaseTypography.Text)`
   font-weight: 500;
   font-size: 0.75rem;
 
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 `;
 
 export const DetailsWrapper = styled.div`

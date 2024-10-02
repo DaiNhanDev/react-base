@@ -24,7 +24,7 @@ export const Wrapper = styled.div<PaymentCardProps>`
     }
 
     & > div {
-      color: ${({theme}) => theme.antd.colorTextSecondary};
+      color: ${({ theme }) => theme.antd.colorTextSecondary};
 
       & > .rccs__chip {
         display: none;

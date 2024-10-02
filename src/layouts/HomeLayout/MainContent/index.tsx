@@ -6,8 +6,8 @@ interface HeaderProps {
   $isTwoColumnsLayout: boolean;
 }
 
-const { mobile, desktop } = LAYOUT
-export default styled(BaseLayout.Content) <HeaderProps>`
+const { mobile, desktop } = LAYOUT;
+export default styled(BaseLayout.Content)<HeaderProps>`
   padding: ${mobile.paddingVertical} ${mobile.paddingHorizontal};
   overflow: auto;
   display: flex;
@@ -20,8 +20,8 @@ export default styled(BaseLayout.Content) <HeaderProps>`
 
   ${Media.xl()} {
     ${(props) =>
-    props?.$isTwoColumnsLayout &&
-    css`
+      props?.$isTwoColumnsLayout &&
+      css`
         padding: 0;
       `}
   }

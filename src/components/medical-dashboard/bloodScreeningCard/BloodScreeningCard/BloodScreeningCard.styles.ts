@@ -19,7 +19,7 @@ export const ActiveItem = styled.div`
   padding: 0 1rem;
   display: flex;
   align-items: center;
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
   font-size: ${FONT_SIZE.xs};
   font-weight: ${FONT_WEIGHT.semibold};
 `;

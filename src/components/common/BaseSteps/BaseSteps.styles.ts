@@ -10,7 +10,7 @@ export const Steps = styled(AntdSteps)`
     > .ant-steps-item-container
     > .ant-steps-item-content
     > .ant-steps-item-title {
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
     font-weight: ${FONT_WEIGHT.semibold};
     font-size: ${FONT_SIZE.xs};
 

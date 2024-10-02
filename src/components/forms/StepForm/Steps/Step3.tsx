@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
 import * as S from '../StepForm.styles';
 import React from 'react';
 

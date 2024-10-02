@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { LAYOUT, Media } from 'styles/themes/constants';
 import { BaseCol } from 'components/common/BaseCol/BaseCol';
 
-const { desktop: { paddingVertical, paddingHorizontal, headerHeight } } = LAYOUT;
+const {
+  desktop: { paddingVertical, paddingHorizontal, headerHeight },
+} = LAYOUT;
 export const RightSideCol = styled(BaseCol)`
   padding: ${paddingVertical} ${paddingHorizontal};
   position: sticky;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';
-import { FilterIcon } from 'components/common/icons/FilterIcon';
+import { FilterIcon } from 'components/common/Icons/FilterIcon';
 import { BaseModal } from 'components/common/BaseModal/BaseModal';
 import { NFTCardHeader } from 'components/nft-dashboard/common/NFTCardHeader/NFTCardHeader';
 import { RecentActivityFilter } from 'components/nft-dashboard/recentActivity/recentActivityFilters/RecentActivityFilter';

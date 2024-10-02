@@ -18,7 +18,7 @@ const slice = createSlice({
     setUser: (state, action: PayloadAction<UserModel>) => {
       persistUser(action.payload);
       state.user = action.payload;
-    }
+    },
   },
 });
 
@@ -31,8 +31,7 @@ export const useUser = () => {
   useInjectSaga({ key: name, saga });
   const dispatch = useDispatch();
 
-  const setUser = (payload) =>
-    dispatch(actions.setUser(payload));
+  const setUser = (payload) => dispatch(actions.setUser(payload));
   const state: UserState = useSelectorData(name) as UserState;
 
   return {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
-import { InputNumber } from 'components/common/inputs/InputNumber/InputNumber';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
+import { InputNumber } from 'components/common/Inputs/InputNumber/InputNumber';
 import { useResetFormOnCloseModal } from './useResetFormOnCloseModal';
 import { BaseModal } from 'components/common/BaseModal/BaseModal';
 

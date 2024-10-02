@@ -22,7 +22,7 @@ export const CodeInput = styled(VerificationInput)`
   }
 
   .character--selected {
-    border: 3px solid ${({theme}) => theme.antd.colorPrimary};
+    border: 3px solid ${({ theme }) => theme.antd.colorPrimary};
   }
 
   ${Media.xs()} {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { BasicTableRow } from 'apis/table.api';
-import { InputNumber } from 'components/common/inputs/InputNumber/InputNumber';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { InputNumber } from 'components/common/Inputs/InputNumber/InputNumber';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 
 interface EditableCellProps extends React.HTMLAttributes<HTMLElement> {
   editing: boolean;

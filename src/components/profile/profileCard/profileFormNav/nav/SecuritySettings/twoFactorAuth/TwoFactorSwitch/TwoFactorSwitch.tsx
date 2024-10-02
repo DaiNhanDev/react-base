@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row, Switch } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 
 interface TwoFactorSwitchProps {
   isEnabled: boolean;

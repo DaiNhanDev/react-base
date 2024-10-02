@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BaseAutoComplete } from 'components/common/BaseAutoComplete/BaseAutoComplete';
-import { SearchInput as CommonSearchInput } from 'components/common/inputs/SearchInput/SearchInput';
+import { SearchInput as CommonSearchInput } from 'components/common/Inputs/SearchInput/SearchInput';
 import { Option } from 'components/common/selects/BaseSelect/BaseSelect';
 import { UserOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';

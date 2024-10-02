@@ -143,15 +143,15 @@ export const Card = styled(NFTCard)<CardInternalProps>`
       animation: titleIn 0.5s ease;
       animation-fill-mode: forwards;
 
-      color: ${({theme}) => theme.antd.colorTextSecondary};
+      color: ${({ theme }) => theme.antd.colorTextSecondary};
     }
 
     ${InfoText} {
-      color: ${({theme}) => theme.antd.colorTextSecondary};
+      color: ${({ theme }) => theme.antd.colorTextSecondary};
     }
 
     ${BidCrypto} {
-      color: ${({theme}) => theme.antd.colorTextSecondary};
+      color: ${({ theme }) => theme.antd.colorTextSecondary};
     }
   }
 

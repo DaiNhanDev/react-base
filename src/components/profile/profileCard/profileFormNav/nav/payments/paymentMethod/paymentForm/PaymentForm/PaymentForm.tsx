@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
-import { BaseButtonsGroup } from 'components/common/forms/components/BaseButtonsGroup/BaseButtonsGroup';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsGroup } from 'components/common/Forms/components/BaseButtonsGroup/BaseButtonsGroup';
 import { CardNumberItem } from 'components/profile/profileCard/profileFormNav/nav/payments/paymentMethod/paymentForm/CardNumberItem/CardNumberItem';
 import { CardholderItem } from 'components/profile/profileCard/profileFormNav/nav/payments/paymentMethod/paymentForm/CardholderItem/CardholderItem';
 import { ExpDateItem } from 'components/profile/profileCard/profileFormNav/nav/payments/paymentMethod/paymentForm/ExpDateItem/ExpDateItem';
@@ -9,7 +9,7 @@ import { CardThemeItem } from 'components/profile/profileCard/profileFormNav/nav
 import { cardThemes } from 'constants/cardThemes';
 import * as S from './PaymentForm.styles';
 import { PaymentCard } from 'interfaces/interfaces';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { BaseRow } from 'components/common/BaseRow/BaseRow';
 import { BaseCol } from 'components/common/BaseCol/BaseCol';
 

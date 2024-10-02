@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { UploadOutlined, InboxOutlined } from '@ant-design/icons';
 import { useState } from 'react';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
-import { InputNumber } from 'components/common/inputs/InputNumber/InputNumber';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
+import { InputNumber } from 'components/common/Inputs/InputNumber/InputNumber';
 import {
   BaseSelect,
   Option,

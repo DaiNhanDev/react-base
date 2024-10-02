@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { notificationController } from 'controllers/notificationController';
 import { useAppDispatch } from 'hooks/reduxHooks';
 import { doSetNewPassword } from 'store/slices/authSlice';
 import * as S from './NewPasswordForm.styles';
-import * as Auth from 'components/layouts/AuthLayout/AuthLayout.styles';
+import * as Auth from 'layouts/AuthLayout/styled';
 
 interface NewPasswordFormData {
   password: string;

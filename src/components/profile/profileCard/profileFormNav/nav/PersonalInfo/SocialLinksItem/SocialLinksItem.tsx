@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { TwitterOutlined } from '@ant-design/icons';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
-import { ClipboardInput } from 'components/common/inputs/ClipboardInput/ClipboardInput';
-import { OpenURLInput } from 'components/common/inputs/OpenURLInput/OpenURLInput';
-import { LinkedinIcon } from 'components/common/icons/LinkedinIcon';
-import { FacebookIcon } from 'components/common/icons/FacebookIcon';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
+import { ClipboardInput } from 'components/common/Inputs/ClipboardInput/ClipboardInput';
+import { OpenURLInput } from 'components/common/Inputs/OpenURLInput/OpenURLInput';
+import { LinkedinIcon } from 'components/common/Icons/LinkedinIcon';
+import { FacebookIcon } from 'components/common/Icons/FacebookIcon';
 import { websitePattern } from 'constants/patterns';
 import { BaseRow } from 'components/common/BaseRow/BaseRow';
 import { BaseCol } from 'components/common/BaseCol/BaseCol';

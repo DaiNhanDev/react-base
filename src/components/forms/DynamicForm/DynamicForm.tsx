@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PlusOutlined } from '@ant-design/icons';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
 import {
   BaseSelect,
   Option,

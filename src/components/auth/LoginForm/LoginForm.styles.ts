@@ -22,7 +22,7 @@ export const LoginDescription = styled.div`
 `;
 
 export const RememberMeText = styled.span`
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
   font-size: ${FONT_SIZE.xs};
 `;
 

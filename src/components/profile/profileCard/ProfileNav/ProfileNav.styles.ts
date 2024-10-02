@@ -19,13 +19,13 @@ export const Btn = styled(BaseButton)<BtnProps>`
   width: 100%;
 
   &:hover {
-    background-color: rgba(${({theme}) => theme.antd.colorPrimary}, 0.05);
+    background-color: rgba(${({ theme }) => theme.antd.colorPrimary}, 0.05);
   }
 
   ${(props) =>
     props.$isActive &&
     css`
-      background-color: rgba(${({theme}) => theme.antd.colorPrimary}, 0.05);
+      background-color: rgba(${({ theme }) => theme.antd.colorPrimary}, 0.05);
     `};
 
   & > span:first-of-type {
@@ -35,6 +35,6 @@ export const Btn = styled(BaseButton)<BtnProps>`
 
     color: ${(props) => `var(--${props.color}-color)`};
 
-    background-color: rgba(${({theme}) => theme.antd.colorPrimary}, 0.05);
+    background-color: rgba(${({ theme }) => theme.antd.colorPrimary}, 0.05);
   }
 `;

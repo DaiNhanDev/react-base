@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './MoonSunSwitch.styles';
-import { MoonIcon } from 'components/common/icons/MoonIcon';
-import { SunIcon } from 'components/common/icons/SunIcon';
+import { MoonIcon } from 'components/common/Icons/MoonIcon';
+import { SunIcon } from 'components/common/Icons/SunIcon';
 
 interface MoonSunSwitchProps {
   isMoonActive: boolean;

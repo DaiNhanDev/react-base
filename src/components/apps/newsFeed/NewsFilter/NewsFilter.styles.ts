@@ -12,7 +12,7 @@ import {
   Media,
 } from 'styles/themes/constants';
 import { BasePopover } from 'components/common/BasePopover/BasePopover';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';
 import { BaseCheckbox } from 'components/common/BaseCheckbox/BaseCheckbox';
 
@@ -199,7 +199,7 @@ export const ClosePopoverWrapper = styled.div`
 `;
 
 export const ClosePopover = styled(CloseOutlined)`
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
   width: 0.875rem;
   height: 0.875rem;
 `;

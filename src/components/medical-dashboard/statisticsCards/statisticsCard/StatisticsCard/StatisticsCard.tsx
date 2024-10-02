@@ -5,7 +5,6 @@ import { StatisticsProgress } from '../StatisticsProgress/StatisticsProgress';
 import { useResponsive } from 'hooks/useResponsive';
 import { StatisticColor } from 'constants/config/statistics';
 import * as S from './StatisticsCard.styles';
-import { themeObject } from 'styles/themes/themeVariables';
 import { useAppSelector } from 'hooks/reduxHooks';
 import { BaseRow } from 'components/common/BaseRow/BaseRow';
 import { BaseCol } from 'components/common/BaseCol/BaseCol';
@@ -27,7 +26,7 @@ export const StatisticsCard: React.FC<StatisticsCardProps> = ({
   unit,
   Icon,
 }) => {
-  const theme = useAppSelector((state) => state.theme.theme);
+  // const theme = useAppSelector((state) => state.theme.theme);
   const { isTablet: isTabletOrHigher } = useResponsive();
 
   const { t } = useTranslation();
@@ -53,7 +52,8 @@ export const StatisticsCard: React.FC<StatisticsCardProps> = ({
 
             <BaseCol>
               <StatisticsProgress
-                color={themeObject[theme][color]}
+                // color={themeObject[theme][color]}
+                color='red'
                 unit={unit}
                 value={value}
               />

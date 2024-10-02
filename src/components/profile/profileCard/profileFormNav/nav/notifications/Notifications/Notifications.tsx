@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 import { BaseCard } from 'components/common/BaseCard/BaseCard';
 import { NotificationsTypes } from 'components/profile/profileCard/profileFormNav/nav/notifications/NotificationsTypes/NotificationsTypes';
 import * as S from './Notifications.styles';

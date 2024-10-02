@@ -1,4 +1,4 @@
-import { BaseFormInstance } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseFormInstance } from 'components/common/Forms/BaseForm/BaseForm';
 import { useEffect, useRef } from 'react';
 
 export const useResetFormOnCloseModal = ({

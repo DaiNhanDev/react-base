@@ -12,7 +12,7 @@ export const Sider = styled(BaseLayout.Sider)`
   min-height: 100vh;
   max-height: 100vh;
   /* background-color: var(--layout-sider-bg-color); */
-  /* color: ${({theme}) => theme.antd.colorTextSecondary}; */
+  /* color: ${({ theme }) => theme.antd.colorTextSecondary}; */
 
   ${Media.md()} {
     right: unset;
@@ -38,17 +38,17 @@ export const CollapseButton = styled(BaseButton)<{ $isCollapsed: boolean }>`
       right: -1rem;
     `}
 
-  color: ${({theme}) => theme.antd.colorTextSecondary};
+  color: ${({ theme }) => theme.antd.colorTextSecondary};
 
   &:hover {
-    color: ${({theme}) => theme.antd.colorTextSecondary};
-    background: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorTextSecondary};
+    background: ${({ theme }) => theme.antd.colorPrimary};
     border: 1px solid var(--border-color);
   }
 
   &:focus {
-    color: ${({theme}) => theme.antd.colorTextSecondary};
-    background: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorTextSecondary};
+    background: ${({ theme }) => theme.antd.colorPrimary};
     border: 1px solid var(--border-color);
   }
 `;

@@ -1,9 +1,9 @@
 import React from 'react';
 import * as S from './Legend.styles';
 import { BasePopover } from 'components/common/BasePopover/BasePopover';
-import { getChartColors } from 'components/common/charts/BaseChart';
+import { getChartColors } from 'components/common/Charts/BaseChart';
 import { useAppSelector } from 'hooks/reduxHooks';
-import { themeObject } from 'styles/themes/themeVariables';
+// import { themeObject } from 'styles/themes/themeVariables';
 
 export interface LegendItem {
   name: string;
@@ -20,15 +20,15 @@ export const Legend: React.FC<LegendProps> = ({
   legendItems,
   activeItemIndex,
 }) => {
-  const theme = useAppSelector((state) => state.theme.theme);
-  const colors = getChartColors(themeObject[theme]);
+  // const theme = useAppSelector((state) => state.theme.theme);
+  // const colors = getChartColors(themeObject[theme]);
 
   return (
     <>
       {legendItems.map((item, index) => (
         <S.LegendWrapper key={index} isSelected={index === activeItemIndex}>
           <S.LegendInfo>
-            <S.LegendColor style={{ backgroundColor: colors[index] }} />
+            <S.LegendColor style={{ backgroundColor: 'red' }} />
             <S.LegendDescription>
               <S.LegendTitle>{item.name}</S.LegendTitle>
             </S.LegendDescription>

@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 export const PaymentHistoryTable = styled(BaseTable)`
   .ant-table-thead > tr > th {
-    border-top: 1px solid rgba(${({theme}) => theme.antd.colorPrimary}, 0.3);
+    border-top: 1px solid rgba(${({ theme }) => theme.antd.colorPrimary}, 0.3);
 
-    border-bottom: 1px solid rgba(${({theme}) => theme.antd.colorPrimary}, 0.3);
+    border-bottom: 1px solid
+      rgba(${({ theme }) => theme.antd.colorPrimary}, 0.3);
 
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
 
     text-align: center;
 

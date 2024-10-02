@@ -23,20 +23,20 @@ export const ButtonGroup = styled.div<BtnProps>`
 
   border-radius: ${BORDER_RADIUS};
 
-  background-color: rgba(${({theme}) => theme.antd.colorPrimary}, 0.1);
+  background-color: rgba(${({ theme }) => theme.antd.colorPrimary}, 0.1);
 
   ${(props) =>
     props.$isFirstActive
       ? css`
           & > ${Btn}:first-of-type {
-            background: ${({theme}) => theme.antd.colorPrimary};
-            color: ${({theme}) => theme.antd.colorTextSecondary};
+            background: ${({ theme }) => theme.antd.colorPrimary};
+            color: ${({ theme }) => theme.antd.colorTextSecondary};
           }
         `
       : css`
           & > ${Btn}:last-of-type {
             background: var(--warning-color);
-            color: ${({theme}) => theme.antd.colorTextSecondary};
+            color: ${({ theme }) => theme.antd.colorTextSecondary};
           }
         `}
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { BaseSelect as CommonSelect } from 'components/common/selects/BaseSelect/BaseSelect';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { FONT_SIZE, FONT_WEIGHT } from 'styles/themes/constants';
 import { BaseSteps } from 'components/common/BaseSteps/BaseSteps';
 

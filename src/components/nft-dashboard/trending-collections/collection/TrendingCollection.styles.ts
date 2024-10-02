@@ -85,7 +85,7 @@ export const AuthorAvatarWrapper = styled.div`
   top: -45px;
   border-radius: 50%;
 
-  border: 2px solid ${({theme}) => theme.antd.colorTextSecondary};
+  border: 2px solid ${({ theme }) => theme.antd.colorTextSecondary};
 `;
 
 export const BidButton = styled(BaseButton)`
@@ -95,9 +95,9 @@ export const BidButton = styled(BaseButton)`
   right: 20px;
   padding: 10px 14px;
 
-  color: ${({theme}) => theme.antd.colorTextSecondary};
+  color: ${({ theme }) => theme.antd.colorTextSecondary};
 
-  border-color: ${({theme}) => theme.antd.colorTextSecondary};
+  border-color: ${({ theme }) => theme.antd.colorTextSecondary};
 
   font-size: ${FONT_SIZE.md};
 `;
@@ -120,7 +120,7 @@ export const Card = styled(NFTCard)<CardInternalProps>`
     }
 
     ${Title}, ${Text}, ${USDText} {
-      color: ${({theme}) => theme.antd.colorTextSecondary};
+      color: ${({ theme }) => theme.antd.colorTextSecondary};
     }
 
     ${AuthorAvatarWrapper} {

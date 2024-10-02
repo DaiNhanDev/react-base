@@ -14,7 +14,7 @@ const colStyles = {
 export const Col = styled.div`
   ${colStyles};
 
-  border-bottom: 1px solid rgba(${({theme}) => theme.antd.colorPrimary}, 0.3);
+  border-bottom: 1px solid rgba(${({ theme }) => theme.antd.colorPrimary}, 0.3);
 
   ${Media.md()} {
     justify-content: unset;
@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
     & > .ant-checkbox > .ant-checkbox-inner {
       border-radius: 3px;
 
-      border-color: ${({theme}) => theme.antd.colorPrimary};
+      border-color: ${({ theme }) => theme.antd.colorPrimary};
     }
   }
 
@@ -53,9 +53,9 @@ export const Wrapper = styled.div`
 export const HeaderCol = styled(Col)`
   background: var(--secondary-background-color);
 
-  border-top: 1px solid rgba(${({theme}) => theme.antd.colorPrimary}, 0.3);
+  border-top: 1px solid rgba(${({ theme }) => theme.antd.colorPrimary}, 0.3);
 
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 
   & .ant-checkbox-wrapper {
     flex-wrap: wrap;

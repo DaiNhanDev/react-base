@@ -94,7 +94,7 @@ export const FullnessLine = styled.div<FullnessLineProps>`
     var(--error-color) 100%
   );
 
-  color: ${({theme}) => theme.antd.colorTextSecondary};
+  color: ${({ theme }) => theme.antd.colorTextSecondary};
 
   ${Media.xl()} {
     font-size: 1rem;

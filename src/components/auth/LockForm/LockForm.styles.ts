@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as Auth from 'components/layouts/AuthLayout/AuthLayout.styles';
+import * as Auth from 'layouts/AuthLayout/styled';
 import { FONT_SIZE, FONT_WEIGHT, Media } from 'styles/themes/constants';
 
 export const FormItem = styled(Auth.FormItem)`

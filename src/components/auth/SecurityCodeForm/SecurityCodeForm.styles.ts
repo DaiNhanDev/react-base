@@ -22,7 +22,7 @@ export const VerifyEmailDescription = styled.div`
 
 export const NoCodeText = styled.div`
   margin-top: 1rem;
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
   font-size: ${FONT_SIZE.xs};
   font-weight: ${FONT_WEIGHT.regular};
   text-decoration: underline;

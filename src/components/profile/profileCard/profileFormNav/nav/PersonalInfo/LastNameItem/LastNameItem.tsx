@@ -1,7 +1,7 @@
 import React from 'react';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
 import { useTranslation } from 'react-i18next';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 
 export const LastNameItem: React.FC = () => {
   const { t } = useTranslation();

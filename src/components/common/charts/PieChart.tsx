@@ -1,8 +1,8 @@
 import React from 'react';
 import { EChartsOption } from 'echarts-for-react';
-import { BaseChart, BaseChartProps } from 'components/common/charts/BaseChart';
+import { BaseChart, BaseChartProps } from 'components/common/Charts/BaseChart';
 import { useAppSelector } from 'hooks/reduxHooks';
-import { themeObject } from 'styles/themes/themeVariables';
+// import { themeObject } from 'styles/themes/themeVariables';
 import { BASE_COLORS } from 'styles/themes/constants';
 
 interface PieChartProps extends BaseChartProps {
@@ -20,7 +20,7 @@ export const PieChart: React.FC<PieChartProps> = ({
   showLegend,
   ...props
 }) => {
-  const theme = useAppSelector((state) => state.theme.theme);
+  // const theme = useAppSelector((state) => state.theme.theme);
 
   const defaultPieOption = {
     tooltip: {
@@ -31,7 +31,7 @@ export const PieChart: React.FC<PieChartProps> = ({
       top: '0%',
       left: 16,
       textStyle: {
-        color: themeObject[theme].textMain,
+        // color: themeObject[theme].textMain,
       },
     },
     series: [
@@ -56,7 +56,7 @@ export const PieChart: React.FC<PieChartProps> = ({
             show: true,
             fontSize: '40',
             fontWeight: 'bold',
-            color: themeObject[theme].textMain,
+            // color: themeObject[theme].textMain,
           },
         },
         labelLine: {

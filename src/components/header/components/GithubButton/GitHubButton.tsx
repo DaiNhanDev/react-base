@@ -4,17 +4,17 @@ import styled from 'styled-components';
 import { useAppSelector } from 'hooks/reduxHooks';
 import { BASE_COLORS } from 'styles/themes/constants';
 import { BaseButton as BaseButton } from 'components/common/BaseButton/BaseButton';
+import { useThemeSlice } from 'slices';
 
 export const GitHubButton: React.FC = (props) => {
-  const theme = useAppSelector((state) => state.theme.theme);
-  console.log('=====> theme: ', theme);
+  const { themeKey } = useThemeSlice();
   return (
     <Button
       type="default"
       href="https://github.com/altence/lightence-admin"
       icon={<GithubIcon />}
       target="_blank"
-      $isDark={theme === 'dark'}
+      $isDark={themeKey === 'dark'}
       {...props}
     >
       GitHub

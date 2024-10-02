@@ -34,7 +34,7 @@ export const SpaceWrapper = styled(BaseSpace)<SpacewWrapperProps>`
         case 'info':
         case 'mention':
           return css`
-            color: ${({theme}) => theme.antd.colorPrimary};
+            color: ${({ theme }) => theme.antd.colorPrimary};
           `;
         default:
           return '';

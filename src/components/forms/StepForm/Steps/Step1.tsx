@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
-import { InputPassword } from 'components/common/inputs/InputPassword/InputPassword';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
+import { InputPassword } from 'components/common/Inputs/InputPassword/InputPassword';
 import * as S from '../StepForm.styles';
 
 export const Step1: React.FC = () => {

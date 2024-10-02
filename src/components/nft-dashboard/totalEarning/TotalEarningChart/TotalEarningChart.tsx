@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   BaseChart,
-  getDefaultTooltipStyles,
-} from 'components/common/charts/BaseChart';
+//  getDefaultTooltipStyles,
+} from 'components/common/Charts/BaseChart';
 import {
   ChartData,
   ChartSeriesData,
@@ -10,7 +10,8 @@ import {
 } from 'interfaces/interfaces';
 import { formatNumberWithCommas, getCurrencyPrice } from 'utils/utils';
 import { useAppSelector } from 'hooks/reduxHooks';
-import { themeObject } from 'styles/themes/themeVariables';
+import { useThemeSlice } from 'slices';
+// import { themeObject } from 'styles/themes/themeVariables';
 
 interface LineData {
   data: ChartData;
@@ -25,10 +26,11 @@ export const TotalEarningChart: React.FC<TotalEarningChartProps> = ({
   xAxisData,
   earningData,
 }) => {
-  const theme = useAppSelector((state) => state.theme.theme);
+  // const { themeKey } = useThemeSlice();
+
   const option = {
     tooltip: {
-      ...getDefaultTooltipStyles(themeObject[theme]),
+      // ...getDefaultTooltipStyles(themeObject[theme]),
       trigger: 'axis',
       crossStyle: {
         color: 'red',
@@ -69,7 +71,7 @@ export const TotalEarningChart: React.FC<TotalEarningChartProps> = ({
         showSymbol: false,
         lineStyle: {
           width: 3,
-          color: themeObject[theme].chartColor3,
+          // color: themeObject[theme].chartColor3,
         },
         emphasis: {
           focus: 'series',

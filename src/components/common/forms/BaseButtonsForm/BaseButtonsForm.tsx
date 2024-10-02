@@ -3,11 +3,11 @@ import {
   BaseForm,
   BaseFormInterface,
   BaseFormProps,
-} from 'components/common/forms//BaseForm/BaseForm';
-import { BaseButtonsGroup } from 'components/common/forms/components/BaseButtonsGroup/BaseButtonsGroup';
-import { BaseFormTitle } from 'components/common/forms/components/BaseFormTitle/BaseFormTitle';
-import { BaseFormItem } from 'components/common/forms/components/BaseFormItem/BaseFormItem';
-import { BaseFormList } from 'components/common/forms/components/BaseFormList/BaseFormList';
+} from 'components/common/Forms/BaseForm/BaseForm';
+import { BaseButtonsGroup } from 'components/common/Forms/components/BaseButtonsGroup/BaseButtonsGroup';
+import { BaseFormTitle } from 'components/common/Forms/components/BaseFormTitle/BaseFormTitle';
+import { BaseFormItem } from 'components/common/Forms/components/BaseFormItem/BaseFormItem';
+import { BaseFormList } from 'components/common/Forms/components/BaseFormList/BaseFormList';
 
 export interface BaseButtonsFormProps extends BaseFormProps {
   isFieldsChanged: boolean;

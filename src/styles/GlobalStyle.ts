@@ -7,35 +7,12 @@ import {
   Media,
   media,
 } from './themes/constants';
-import {
-  lightThemeVariables,
-  darkThemeVariables,
-  commonThemeVariables,
-  antOverrideCssVariables,
-} from './themes/themeVariables';
 
 export default createGlobalStyle`
 
   ${resetCss}
 
-  /* [data-theme='light'],
-  :root {
-    ${lightThemeVariables}
-  }
-
-  [data-theme='dark'] {
-    ${darkThemeVariables}
-  }
-
-  :root {
-    ${commonThemeVariables};
-    ${antOverrideCssVariables};
-  } 
-
-  [data-no-transition] * {
-    transition: none !important;
-  }
-  
+  /* [data-theme='light'], 
   .range-picker {
     & .ant-picker-panels {
       @media only screen and ${media.xs} and (max-width: ${BREAKPOINTS.md - 0.02}px) {
@@ -59,7 +36,7 @@ export default createGlobalStyle`
   }
 
   a {
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
     &:hover,:active {
       color: var(--ant-primary-color-hover);
     }
@@ -153,11 +130,11 @@ export default createGlobalStyle`
     }
   
     &.ant-notification-notice-info {
-      border: 1px solid ${({theme}) => theme.antd.colorPrimary};
+      border: 1px solid ${({ theme }) => theme.antd.colorPrimary};
       background: var(--notification-primary-color);
   
       .title {
-        color: ${({theme}) => theme.antd.colorPrimary};
+        color: ${({ theme }) => theme.antd.colorPrimary};
       }
     }
   
@@ -184,7 +161,7 @@ export default createGlobalStyle`
     }
   
     .info-icon {
-      color: ${({theme}) => theme.antd.colorPrimary};
+      color: ${({ theme }) => theme.antd.colorPrimary};
     }
   
     .warning-icon {

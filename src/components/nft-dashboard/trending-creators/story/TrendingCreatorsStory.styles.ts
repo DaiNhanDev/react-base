@@ -16,7 +16,9 @@ export const CreatorButton = styled.button<StoriesInternalProps>`
 
   border: 3px solid
     ${(props) =>
-      !props.$viewed ? '${({theme}) => theme.antd.colorPrimary}' : 'var(--text-superLight-color)'};
+      !props.$viewed
+        ? '${({theme}) => theme.antd.colorPrimary}'
+        : 'var(--text-superLight-color)'};
 `;
 
 export const Avatar = styled.img`

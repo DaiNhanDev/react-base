@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { setTheme } from 'store/slices/themeSlice';
 import { useAppDispatch, useAppSelector } from 'hooks/reduxHooks';
 import { Dates } from 'constants/Dates';
 import { msToH } from 'utils/utils';
+import { useThemeSlice } from 'slices';
 
 const getNextTime = (ms: number) => {
   const now = Date.now();
@@ -42,8 +42,8 @@ let timeoutNightStarts: null | ReturnType<typeof setTimeout> = null;
 let timeoutNightEnds: null | ReturnType<typeof setTimeout> = null;
 
 export const useAutoNightMode = (): void => {
-  const dispatch = useAppDispatch();
   const { isNightMode, nightTime } = useAppSelector((state) => state.nightMode);
+  const { themeKey, changeTheme } = useThemeSlice();
 
   useEffect(() => {
     timeoutNightStarts && clearTimeout(timeoutNightStarts);
@@ -51,13 +51,13 @@ export const useAutoNightMode = (): void => {
 
     if (isNightMode) {
       if (isNight(nightTime)) {
-        dispatch(setTheme('dark'));
+        changeTheme('dark');
       } else {
-        dispatch(setTheme('light'));
+        changeTheme('light');
       }
 
       const runTimeoutStart = () => {
-        dispatch(setTheme('dark'));
+        changeTheme('dark');
         timeoutNightStarts = setTimeout(runTimeoutStart, 24 * 3600 * 1000);
       };
 
@@ -66,7 +66,7 @@ export const useAutoNightMode = (): void => {
       timeoutNightStarts = setTimeout(runTimeoutStart, nextStartTime);
 
       const runTimeoutEnd = () => {
-        dispatch(setTheme('light'));
+        changeTheme('light');
         timeoutNightEnds = setTimeout(runTimeoutEnd, 24 * 3600 * 1000);
       };
 
@@ -83,5 +83,5 @@ export const useAutoNightMode = (): void => {
       timeoutNightStarts && clearTimeout(timeoutNightStarts);
       timeoutNightEnds && clearTimeout(timeoutNightEnds);
     };
-  }, [dispatch, isNightMode, nightTime]);
+  }, [isNightMode, nightTime]);
 };

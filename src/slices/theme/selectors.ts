@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
 
 import { RootState } from 'types';
-import { themes, isSystemDark } from 'styled';
+import { themes, isSystemDark } from 'styles';
 import { initialState } from '.';
 
 // First select the relevant part from the state
@@ -20,10 +20,5 @@ export const selectThemeData = createSelector(
 
 export const selectThemeKey = createSelector(
   selectDomain,
-  ({ theme = initialState }) => theme.selected || 'system',
-);
-
-export const selectTheme = createSelector(
-  selectDomain,
-  ({ theme = initialState }) => theme.theme,
+  ({ theme = initialState }) => theme.selected || 'light',
 );

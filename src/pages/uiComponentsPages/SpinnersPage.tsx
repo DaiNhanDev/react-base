@@ -10,7 +10,7 @@ import { BaseAlert } from 'components/common/BaseAlert/BaseAlert';
 import { GlobalSpinner } from 'components/common/GlobalSpinner/GlobalSpinner';
 import { PageTitle } from 'components/common/PageTitle/PageTitle';
 import * as S from 'pages/uiComponentsPages//UIComponentsPage.styles';
-import { themeObject } from 'styles/themes/themeVariables';
+// import { themeObject } from 'styles/themes/themeVariables';
 import { BaseSwitch } from 'components/common/BaseSwitch/BaseSwitch';
 import { BaseCol } from 'components/common/BaseCol/BaseCol';
 import { BaseSpace } from 'components/common/BaseSpace/BaseSpace';
@@ -29,8 +29,8 @@ const SpinnersPage: React.FC = () => {
       <PageTitle>{t('common.spinner')}</PageTitle>
       <BaseCol>
         <S.Card title={t('spinners.globalAppSpinner')}>
-          <GlobalSpinner color={themeObject['light'].spinnerBase} />
-          <GlobalSpinner color={themeObject['dark'].spinnerBase} />
+          {/* <GlobalSpinner color={themeObject['light'].spinnerBase} />
+          <GlobalSpinner color={themeObject['dark'].spinnerBase} /> */}
         </S.Card>
         <S.Card title={t('spinners.sizes')}>
           <BaseSpin size="small" />

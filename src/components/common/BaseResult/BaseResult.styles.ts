@@ -7,7 +7,7 @@ export const Result = styled(AntResult)`
   }
 
   &.ant-result-info .ant-result-icon > .anticon {
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
   }
   &.ant-result-warning .ant-result-icon > .anticon {
     color: var(--warning-color);

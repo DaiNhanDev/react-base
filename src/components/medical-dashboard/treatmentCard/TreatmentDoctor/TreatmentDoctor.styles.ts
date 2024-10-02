@@ -13,7 +13,7 @@ export const DoctorName = styled.span`
 export const DoctorCard = styled(BaseCard)`
   background: linear-gradient(
     to bottom,
-    ${({theme}) => theme.antd.colorPrimary} 5rem,
+    ${({ theme }) => theme.antd.colorPrimary} 5rem,
     var(--secondary-background-color) 5rem
   );
 `;

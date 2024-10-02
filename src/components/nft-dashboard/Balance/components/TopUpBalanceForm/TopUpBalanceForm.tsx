@@ -2,8 +2,8 @@ import React from 'react';
 import creditCardType from 'credit-card-type';
 import { useTranslation } from 'react-i18next';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
-import { InputNumber } from 'components/common/inputs/InputNumber/InputNumber';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
+import { InputNumber } from 'components/common/Inputs/InputNumber/InputNumber';
 import { BaseRadio } from 'components/common/BaseRadio/BaseRadio';
 import {
   Option,

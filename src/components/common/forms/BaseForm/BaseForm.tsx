@@ -2,9 +2,9 @@ import React, { ComponentProps } from 'react';
 import { Form, FormInstance } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { ValidateErrorEntity } from 'rc-field-form/lib/interface';
-import { BaseFormTitle } from 'components/common/forms/components/BaseFormTitle/BaseFormTitle';
-import { BaseFormItem } from 'components/common/forms/components/BaseFormItem/BaseFormItem';
-import { BaseFormList } from 'components/common/forms/components/BaseFormList/BaseFormList';
+import { BaseFormTitle } from 'components/common/Forms/components/BaseFormTitle/BaseFormTitle';
+import { BaseFormItem } from 'components/common/Forms/components/BaseFormItem/BaseFormItem';
+import { BaseFormList } from 'components/common/Forms/components/BaseFormList/BaseFormList';
 import { notificationController } from 'controllers/notificationController';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BaseCard } from 'components/common/BaseCard/BaseCard';
 import { useTranslation } from 'react-i18next';
-import { PieChart } from '../common/charts/PieChart';
+import { PieChart } from '../common/Charts/PieChart';
 
 export const VisitorsPieChart: React.FC = () => {
   const { t } = useTranslation();

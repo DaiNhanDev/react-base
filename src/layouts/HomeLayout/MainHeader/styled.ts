@@ -7,7 +7,7 @@ interface Header {
 }
 
 const { desktop } = LAYOUT;
-export const Header = styled(BaseLayout.Header) <Header>`
+export const Header = styled(BaseLayout.Header)<Header>`
   line-height: 1.5;
 
   ${Media.md()} {
@@ -17,8 +17,8 @@ export const Header = styled(BaseLayout.Header) <Header>`
 
   ${Media.md()} {
     ${(props) =>
-    props?.$isTwoColumnsLayoutHeader &&
-    css`
+      props?.$isTwoColumnsLayoutHeader &&
+      css`
         padding: 0;
       `}
   }

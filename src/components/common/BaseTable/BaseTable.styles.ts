@@ -4,12 +4,12 @@ import { FONT_SIZE } from 'styles/themes/constants';
 
 export const Table = styled(AntdTable)`
   & thead .ant-table-cell {
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
     font-size: ${FONT_SIZE.xs};
     line-height: 1.25rem;
 
     & .anticon {
-      color: ${({theme}) => theme.antd.colorPrimary};
+      color: ${({ theme }) => theme.antd.colorPrimary};
     }
   }
 
@@ -33,7 +33,7 @@ export const Table = styled(AntdTable)`
     > th:not(:last-child):not(.ant-table-selection-column):not(
       .ant-table-row-expand-icon-cell
     ):not([colspan])::before {
-    background-color: ${({theme}) => theme.antd.colorPrimary};
+    background-color: ${({ theme }) => theme.antd.colorPrimary};
   }
 
   & .ant-pagination-prev,
@@ -57,7 +57,7 @@ export const Table = styled(AntdTable)`
     border-radius: 0.1875rem;
     height: 1.25rem;
     width: 1.25rem;
-    border: 1px solid ${({theme}) => theme.antd.colorPrimary};
+    border: 1px solid ${({ theme }) => theme.antd.colorPrimary};
   }
 
   & .editable-row .ant-form-item-explain {

@@ -10,7 +10,7 @@ export const SearchResultsWrapper = styled.div`
       font-size: 0.75rem;
       padding-bottom: 6px;
 
-      color: ${({theme}) => theme.antd.colorPrimary};
+      color: ${({ theme }) => theme.antd.colorPrimary};
 
       ${Media.md()} {
         font-size: 0.875rem;

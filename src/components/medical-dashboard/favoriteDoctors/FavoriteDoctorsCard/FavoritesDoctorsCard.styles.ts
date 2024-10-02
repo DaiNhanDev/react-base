@@ -19,7 +19,7 @@ export const SliderArrow = styled.div`
   }
 
   &:before {
-    color: ${({theme}) => theme.antd.colorPrimary} !important;
+    color: ${({ theme }) => theme.antd.colorPrimary} !important;
     font-size: 2rem !important;
     position: absolute;
     left: -6px;

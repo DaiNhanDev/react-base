@@ -7,7 +7,7 @@ import { PageTitle } from 'components/common/PageTitle/PageTitle';
 import * as S from 'pages/uiComponentsPages//UIComponentsPage.styles';
 import { Media } from 'styles/themes/constants';
 import { BaseSwitch } from 'components/common/BaseSwitch/BaseSwitch';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { BaseCol } from 'components/common/BaseCol/BaseCol';
 import { BaseSpace } from 'components/common/BaseSpace/BaseSpace';
 import { BaseDivider } from 'components/common/BaseDivider/BaseDivider';

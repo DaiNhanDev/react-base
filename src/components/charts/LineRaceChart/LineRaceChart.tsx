@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BaseCard } from 'components/common/BaseCard/BaseCard';
-import { BaseChart } from 'components/common/charts/BaseChart';
+import { BaseChart } from 'components/common/Charts/BaseChart';
 import Data from './data.json';
 import { useAppSelector } from 'hooks/reduxHooks';
-import { themeObject } from 'styles/themes/themeVariables';
+import { useThemeSlice } from 'slices';
+// import { themeObject } from 'styles/themes/themeVariables';
 
 interface DataRow {
   id: string;
@@ -51,7 +52,7 @@ export const LineRaceChart: React.FC = () => {
   const rawData = JSON.parse(JSON.stringify(Data));
   const { t } = useTranslation();
 
-  const theme = useAppSelector((state) => state.theme.theme);
+  const { themeKey } = useThemeSlice();
 
   const runAnimation = useCallback(() => {
     const countries = [
@@ -87,7 +88,7 @@ export const LineRaceChart: React.FC = () => {
         endLabel: {
           show: true,
           formatter: (params) => `${params.value[3]}: ${params.value[0]}`,
-          color: themeObject[theme].textMain,
+          // color: themeObject[theme].textMain,
         },
         labelLayout: {
           moveOverlap: 'shiftY',
@@ -106,7 +107,7 @@ export const LineRaceChart: React.FC = () => {
     });
     setData(datasetWithFilters);
     setSeries(seriesList);
-  }, [theme]);
+  }, [themeKey]);
 
   useEffect(() => {
     setTimeout(() => {

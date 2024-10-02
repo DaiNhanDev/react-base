@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 // import { CheckboxValueType } from 'antd/lib/checkbox/Group';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 import { CheckboxColumn } from 'components/profile/profileCard/profileFormNav/nav/notifications/CheckboxColumn/CheckboxColumn';
 import { Option } from 'components/profile/profileCard/profileFormNav/nav/notifications/interfaces';
 import * as S from './NotificationsTypes.styles';
-import { BaseButtonsGroup } from 'components/common/forms/components/BaseButtonsGroup/BaseButtonsGroup';
+import { BaseButtonsGroup } from 'components/common/Forms/components/BaseButtonsGroup/BaseButtonsGroup';
 import { notificationController } from 'controllers/notificationController';
 import { BaseCheckbox } from 'components/common/BaseCheckbox/BaseCheckbox';
 

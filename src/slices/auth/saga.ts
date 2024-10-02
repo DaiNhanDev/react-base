@@ -30,5 +30,4 @@ export function* getMeSaga() {
   });
 }
 
-export function* saga() {
-}
+export function* saga() {}

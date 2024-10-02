@@ -83,7 +83,7 @@ export const Button = styled(AntButton)<BtnProps>`
 
       ${props.type === 'primary' &&
       css`
-        background: ${({theme}) => theme.antd.colorPrimary};
+        background: ${({ theme }) => theme.antd.colorPrimary};
 
         &:hover {
           background: var(--secondary-color);

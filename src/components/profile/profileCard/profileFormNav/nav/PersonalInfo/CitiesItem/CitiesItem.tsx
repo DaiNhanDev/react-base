@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseInput } from 'components/common/inputs/BaseInput/BaseInput';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseInput } from 'components/common/Inputs/BaseInput/BaseInput';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 
 export const CitiesItem: React.FC = () => {
   const { t } = useTranslation();

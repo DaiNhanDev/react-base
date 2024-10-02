@@ -12,6 +12,6 @@ export const BtnWrapper = styled.div`
     width: unset;
     height: unset;
 
-    color: ${({theme}) => theme.antd.colorTextSecondary};
+    color: ${({ theme }) => theme.antd.colorTextSecondary};
   }
 `;

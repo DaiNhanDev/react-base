@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { BaseCard } from 'components/common/BaseCard/BaseCard';
 import { PaymentCardsWidget } from 'components/profile/profileCard/profileFormNav/nav/payments/paymentMethod/PaymentCardsWidget';
 import { useResponsive } from 'hooks/useResponsive';

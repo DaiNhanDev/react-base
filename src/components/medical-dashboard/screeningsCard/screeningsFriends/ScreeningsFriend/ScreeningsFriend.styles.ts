@@ -31,7 +31,8 @@ export const Avatar = styled(BaseAvatar)<Importance>`
   position: relative;
 
   ${(props) =>
-    (props.$isPrimary && `border: 2px solid ${({theme}) => theme.antd.colorPrimary}`) ||
+    (props.$isPrimary &&
+      `border: 2px solid ${({ theme }) => theme.antd.colorPrimary}`) ||
     (props.$isSecondary && `border 2px solid var(--error-color)`)}
 `;
 

@@ -27,7 +27,7 @@ export const DropdownCollapse = styled(BaseCollapse)`
     font-weight: 600;
     font-size: 0.875rem;
 
-    color: ${({theme}) => theme.antd.colorPrimary};
+    color: ${({ theme }) => theme.antd.colorPrimary};
 
     ${Media.md()} {
       font-size: 1rem;
@@ -57,7 +57,7 @@ export const MobileBurger = styled(BurgerIcon)`
   ${(props) =>
     props.isCross &&
     css`
-      color: ${({theme}) => theme.antd.colorTextSecondary};
+      color: ${({ theme }) => theme.antd.colorTextSecondary};
     `};
 `;
 

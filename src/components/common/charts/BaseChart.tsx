@@ -3,8 +3,8 @@ import { EChartsOption } from 'echarts-for-react';
 import ReactECharts from 'echarts-for-react';
 import { Loading } from '../Loading/Loading';
 import { useAppSelector } from 'hooks/reduxHooks';
-import { themeObject } from 'styles/themes/themeVariables';
-import { ITheme } from 'styles/themes/types';
+// import { themeObject } from 'styles/themes/themeVariables';
+// import { ITheme } from 'styles/themes/types';
 import { BORDER_RADIUS } from 'styles/themes/constants';
 
 export interface BaseChartProps {
@@ -28,7 +28,7 @@ interface DefaultTooltipStyles {
   };
 }
 
-export const getChartColors = (theme: ITheme): string[] => [
+export const getChartColors = (theme): string[] => [
   theme.chartColor1,
   theme.chartColor2,
   theme.chartColor3,
@@ -36,18 +36,18 @@ export const getChartColors = (theme: ITheme): string[] => [
   theme.chartColor5,
 ];
 
-export const getDefaultTooltipStyles = (
-  theme: ITheme,
-): DefaultTooltipStyles => ({
-  borderColor: theme.chartColor1,
-  borderWidth: 2,
-  borderRadius: Number.parseInt(BORDER_RADIUS),
-  textStyle: {
-    fontWeight: 600,
-    fontSize: 16,
-    color: theme.chartColor1,
-  },
-});
+// export const getDefaultTooltipStyles = (
+//   theme: ITheme,
+// ): DefaultTooltipStyles => ({
+//   borderColor: theme.chartColor1,
+//   borderWidth: 2,
+//   borderRadius: Number.parseInt(BORDER_RADIUS),
+//   textStyle: {
+//     fontWeight: 600,
+//     fontSize: 16,
+//     color: theme.chartColor1,
+//   },
+// });
 
 export const BaseChart: React.FC<BaseChartProps> = ({
   option,
@@ -57,13 +57,13 @@ export const BaseChart: React.FC<BaseChartProps> = ({
   style,
   ...props
 }) => {
-  const theme = useAppSelector((state) => state.theme.theme);
+  // const theme = useAppSelector((state) => state.theme.theme);
   const [loading, setLoading] = useState(true);
 
   const chartHeight = height || '400px';
 
   const defaultOption = {
-    color: getChartColors(themeObject[theme]),
+    // color: getChartColors(themeObject[theme]),
   };
 
   useEffect(() => {

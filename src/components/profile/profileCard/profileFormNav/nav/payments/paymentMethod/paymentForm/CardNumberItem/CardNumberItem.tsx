@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseButtonsForm } from 'components/common/forms/BaseButtonsForm/BaseButtonsForm';
+import { BaseButtonsForm } from 'components/common/Forms/BaseButtonsForm/BaseButtonsForm';
 import MaskedInput from 'antd-mask-input';
 import { CardInputProps } from 'components/profile/profileCard/profileFormNav/nav/payments/paymentMethod/paymentForm/interfaces';
 

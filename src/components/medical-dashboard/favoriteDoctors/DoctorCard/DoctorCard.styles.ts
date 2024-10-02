@@ -18,7 +18,7 @@ export const Title = styled(BaseTypography.Text)`
 
   font-weight: ${FONT_WEIGHT.medium};
 
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
 
   ${Media.md()} {
     font-size: ${FONT_SIZE.xs};

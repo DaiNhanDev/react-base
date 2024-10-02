@@ -9,7 +9,7 @@ import { EditableCell } from './EditableCell';
 import { BaseButton } from 'components/common/BaseButton/BaseButton';
 import { useTranslation } from 'react-i18next';
 import { useMounted } from 'hooks/useMounted';
-import { BaseForm } from 'components/common/forms/BaseForm/BaseForm';
+import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
 import { BaseSpace } from 'components/common/BaseSpace/BaseSpace';
 import { BasePopconfirm } from 'components/common/BasePopconfirm/BasePopconfirm';
 

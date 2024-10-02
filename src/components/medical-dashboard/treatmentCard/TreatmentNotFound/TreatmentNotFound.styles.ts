@@ -2,7 +2,7 @@ import { BaseImage } from 'components/common/BaseImage/BaseImage';
 import styled from 'styled-components';
 
 export const Text = styled.div`
-  color: ${({theme}) => theme.antd.colorPrimary};
+  color: ${({ theme }) => theme.antd.colorPrimary};
   text-align: center;
   font-size: 1.25rem;
   margin: 1rem 0;
