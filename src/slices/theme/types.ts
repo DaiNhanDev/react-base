@@ -1,6 +1,4 @@
-import { themes } from 'styles';
-
-export type ThemeKeyType = keyof typeof themes;
+import { ThemeKeyType } from 'styles';
 
 export interface ThemeState {
   selected: ThemeKeyType;

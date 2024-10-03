@@ -10,9 +10,6 @@ const selectDomain = (state: RootState) => state;
 export const selectThemeData = createSelector(
   selectDomain,
   ({ theme = initialState }) => {
-    if (theme.selected === 'system') {
-      return isSystemDark ? themes.light : themes.light;
-    }
     if (!theme.selected) return themes.light;
     return themes[theme.selected];
   },

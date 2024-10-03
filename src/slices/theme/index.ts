@@ -2,8 +2,8 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from 'utils/@reduxjs/toolkit';
 import { useInjectReducer } from 'utils/redux-injectors';
 import { useSelector, useDispatch } from 'react-redux';
-import { getThemeFromStorage } from 'styles';
-import { ThemeKeyType, ThemeState } from './types';
+import { getThemeFromStorage, ThemeKeyType } from 'styles';
+import { ThemeState } from './types';
 import { selectThemeData, selectThemeKey } from './selectors';
 
 const themeKey = getThemeFromStorage();

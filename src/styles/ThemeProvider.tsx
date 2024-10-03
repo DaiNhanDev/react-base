@@ -1,17 +1,16 @@
 import React from 'react';
-import { theme } from 'antd';
+import { theme as themeAnt } from 'antd';
 import { ThemeProvider as OriginalThemeProvider } from 'styled-components';
 import { useThemeSlice } from 'slices';
 
 interface IProps extends React.PropsWithChildren {}
 
 export const ThemeProvider: React.FC<IProps> = ({ children }) => {
-  const { token } = theme.useToken();
+  const { token } = themeAnt.useToken();
   const { theme } = useThemeSlice();
-  console.log('====> token', token);
-
+  console.log('====> theme', {...theme, antd: token});
   return (
-    <OriginalThemeProvider theme={{ base: theme, antd: token, app: {} }}>
+    <OriginalThemeProvider theme={{ ...theme, antd: token }}>
       {children}
     </OriginalThemeProvider>
   );

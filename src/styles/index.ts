@@ -1,8 +1,7 @@
-export * from './utils';
 import { DefaultTheme } from 'styled-components';
 import { BASE_COLORS } from './base.color';
-import { antLightColorTheme } from './themes/light';
-import { antDarkColorTheme } from './themes/dark';
+export * from './themes/light';
+export * from './themes/dark';
 export * from './constants';
 export * from './media';
 export * from './ThemeProvider';
@@ -12,10 +11,11 @@ const appLightTheme = {
   spinnerBase: '#f42f25',
 };
 
+
 export type BaseTheme = typeof BASE_COLORS;
 export type AppTheme = typeof appLightTheme;
 const lightTheme: DefaultTheme = {
-  antd: antLightColorTheme,
+  antd: {},
   base: BASE_COLORS,
   app: appLightTheme,
 };
@@ -25,7 +25,7 @@ const appDarkTheme: AppTheme = {
 };
 
 const darkTheme: DefaultTheme = {
-  antd: antDarkColorTheme,
+  antd: {},
   base: BASE_COLORS,
   app: appDarkTheme,
 };
@@ -34,3 +34,5 @@ export const themes = {
   light: lightTheme,
   dark: darkTheme,
 };
+
+export type ThemeKeyType = keyof typeof themes;

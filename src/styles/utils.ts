@@ -1,4 +1,4 @@
-import { ThemeKeyType } from 'slices/theme/types';
+import { ThemeKeyType } from "styles";
 
 /* istanbul ignore next line */
 export const isSystemDark = window?.matchMedia
