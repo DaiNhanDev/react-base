@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { FONT_SIZE } from 'styles/themes/constants';
-import { BaseMenu } from 'components/common/BaseMenu/BaseMenu';
+import { FONT_SIZE } from 'styles';
+import { BaseMenu } from 'components';
 
 export const Menu = styled(BaseMenu)`
   background: transparent;

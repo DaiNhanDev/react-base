@@ -5,10 +5,9 @@ import { useDispatch } from 'react-redux';
 import { initialStates } from 'slices/initialStates';
 import { useSelectorData } from 'slices/selectors';
 
-import { persistUser } from 'services/localStorage.service';
-import { UserModel } from 'domain/UserModel';
 import { saga } from './saga';
 import { UserState } from './types';
+import { UserModel } from 'models';
 
 const name = 'user';
 const slice = createSlice({
@@ -16,7 +15,6 @@ const slice = createSlice({
   initialState: initialStates[name],
   reducers: {
     setUser: (state, action: PayloadAction<UserModel>) => {
-      persistUser(action.payload);
       state.user = action.payload;
     },
   },

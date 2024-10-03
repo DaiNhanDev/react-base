@@ -1,4 +1,4 @@
-import { BREAKPOINTS, media } from 'styles/themes/constants';
+import { BREAKPOINTS, media } from 'styles';
 import {
   MediaQueryAllQueryable,
   MediaQueryMatchers,

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import * as S from './styled';
+import { Wrapper, BackgroundWrapper, LoginWrapper } from './styled';
 
 const AuthLayout: React.FC = () => {
   return (
-    <S.Wrapper>
-      <S.BackgroundWrapper>
-        <S.LoginWrapper>
+    <Wrapper>
+      <BackgroundWrapper>
+        <LoginWrapper>
           <Outlet />
-        </S.LoginWrapper>
-      </S.BackgroundWrapper>
-    </S.Wrapper>
+        </LoginWrapper>
+      </BackgroundWrapper>
+    </Wrapper>
   );
 };
 

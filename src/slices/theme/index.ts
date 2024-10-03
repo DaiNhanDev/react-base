@@ -6,10 +6,10 @@ import { getThemeFromStorage } from 'styles';
 import { ThemeKeyType, ThemeState } from './types';
 import { selectThemeData, selectThemeKey } from './selectors';
 
-const themeKey = getThemeFromStorage() || 'system';
+const themeKey = getThemeFromStorage();
 
 export const initialState: ThemeState = {
-  selected: themeKey,
+  selected: 'light',
 };
 
 const slice = createSlice({
@@ -31,11 +31,11 @@ export const useThemeSlice = () => {
   const dispatch = useDispatch();
 
   const themeKey: ThemeKeyType = useSelector(selectThemeKey);
-  const themeData = useSelector(selectThemeData);
+  const theme = useSelector(selectThemeData);
 
   const changeTheme = (payload) => dispatch(actions.changeTheme(payload));
 
-  return { changeTheme, themeData, themeKey };
+  return { changeTheme, theme, themeKey };
 };
 
 export default slice;

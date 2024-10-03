@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { LAYOUT, Media } from 'styles/themes/constants';
-import { BaseButton } from 'components/common/BaseButton/BaseButton';
-import { BaseLayout } from 'components/common/BaseLayout/BaseLayout';
+import { LAYOUT, Media } from 'styles';
+import { BaseButton } from 'components/Common/BaseButton';
+import { BaseLayout } from 'components/Common/BaseLayout';
 
 export const Sider = styled(BaseLayout.Sider)`
   position: fixed;

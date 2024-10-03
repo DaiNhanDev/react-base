@@ -1,44 +1,11 @@
-import { NotificationType } from 'components/common/BaseNotification/BaseNotification';
-import { Priority } from 'constants/enums/priorities';
-import visa from 'assets/images/card-issuers/visa.png';
-import mastercard from 'assets/images/card-issuers/mastercard.png';
-import maestro from 'assets/images/card-issuers/maestro.png';
-import { CurrencyTypeEnum, Severity } from 'interfaces/interfaces';
-import { BaseBadgeProps } from 'components/common/BaseBadge/BaseBadge';
-import { currencies } from 'constants/config/currencies';
-
 export const camelize = (string: string): string => {
-  return string
+    return string
     .split(' ')
     .map((word, index) =>
       index === 0 ? word.toLowerCase() : word[0].toUpperCase() + word.slice(1),
     )
     .join('');
 };
-
-export const getCurrencyPrice = (
-  price: number | string,
-  currency: CurrencyTypeEnum,
-  isIcon = true,
-): string => {
-  const currencySymbol = currencies[currency][isIcon ? 'icon' : 'text'];
-
-  return isIcon ? `${currencySymbol}${price}` : `${price} ${currencySymbol}`;
-};
-
-type MarkArea = {
-  xAxis: number;
-};
-
-export const getMarkAreaData = (data: string[] | number[]): MarkArea[][] =>
-  data.map((el, index) => [
-    {
-      xAxis: 2 * index,
-    },
-    {
-      xAxis: 2 * index + 1,
-    },
-  ]);
 
 export const capitalize = (word: string): string =>
   `${word[0].toUpperCase()}${word.slice(1)}`;
@@ -49,89 +16,6 @@ export const hexToRGB = (hex: string): string => {
     b = parseInt(hex.slice(5, 7), 16);
 
   return `${r}, ${g}, ${b}`;
-};
-
-export const getDifference = (
-  value: number,
-  prevValue: number,
-): string | null =>
-  prevValue !== 0
-    ? `${((Math.abs(value - prevValue) / prevValue) * 100).toFixed(0)}%`
-    : '100%';
-
-export const normalizeProp = (
-  prop: string | number | [number, number],
-): string =>
-  typeof prop === 'number'
-    ? `${prop}px`
-    : (Array.isArray(prop) && `${prop[0]}px ${prop[1]}px`) || prop.toString();
-
-export const defineColorByPriority = (priority: Priority): string => {
-  switch (priority) {
-    case Priority.INFO:
-      return '${({theme}) => theme.antd.colorPrimary}';
-    case Priority.LOW:
-      return 'var(--success-color)';
-    case Priority.MEDIUM:
-      return 'var(--warning-color)';
-    case Priority.HIGH:
-      return 'var(--error-color)';
-    default:
-      return 'var(--success-color)';
-  }
-};
-
-export const defineColorBySeverity = (
-  severity: NotificationType | undefined,
-  rgb = false,
-): string => {
-  const postfix = rgb ? 'rgb-color' : 'color';
-  switch (severity) {
-    case 'error':
-    case 'warning':
-    case 'success':
-      return `var(--${severity}-${postfix})`;
-    case 'info':
-    default:
-      return `var(--primary-${postfix})`;
-  }
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const mergeBy = (a: any[], b: any[], key: string): any[] =>
-  a
-    .filter((elem) => !b.find((subElem) => subElem[key] === elem[key]))
-    .concat(b);
-
-export const getSmoothRandom = (factor: number, start: number): number => {
-  const halfEnvelope = 1 / factor / 2;
-  const max = Math.min(1, start + halfEnvelope);
-  const min = Math.max(0, start - halfEnvelope);
-
-  return Math.random() * (max - min) + min;
-};
-
-export const shadeColor = (color: string, percent: number): string => {
-  let R = parseInt(color.substring(1, 3), 16);
-  let G = parseInt(color.substring(3, 5), 16);
-  let B = parseInt(color.substring(5, 7), 16);
-
-  R = parseInt(((R * (100 + percent)) / 100).toString());
-  G = parseInt(((G * (100 + percent)) / 100).toString());
-  B = parseInt(((B * (100 + percent)) / 100).toString());
-
-  R = R < 255 ? R : 255;
-  G = G < 255 ? G : 255;
-  B = B < 255 ? B : 255;
-
-  const RR =
-    R.toString(16).length === 1 ? '0' + R.toString(16) : R.toString(16);
-  const GG =
-    G.toString(16).length === 1 ? '0' + G.toString(16) : G.toString(16);
-  const BB =
-    B.toString(16).length === 1 ? '0' + B.toString(16) : B.toString(16);
-
-  return '#' + RR + GG + BB;
 };
 
 export const hexToHSL = (hex: string): { h: number; s: number; l: number } => {
@@ -176,40 +60,17 @@ export const hexToHSL = (hex: string): { h: number; s: number; l: number } => {
   }
 };
 
+export const getSmoothRandom = (factor: number, start: number): number => {
+  const halfEnvelope = 1 / factor / 2;
+  const max = Math.min(1, start + halfEnvelope);
+  const min = Math.max(0, start - halfEnvelope);
+
+  return Math.random() * (max - min) + min;
+};
+
 export const formatNumberWithCommas = (value: number): string => {
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
 export const msToH = (ms: number): number => Math.floor(ms / 3600000);
 
 export const hToMS = (h: number): number => h * 3600000;
-
-export const getPaymentCardTypeIcon = (type: string): string | null => {
-  switch (type) {
-    case 'visa':
-      return visa;
-    case 'mastercard':
-      return mastercard;
-    case 'maestro':
-      return maestro;
-    case 'amex':
-      return 'amex';
-    case 'discover':
-      return 'discover';
-    case 'diners':
-      return 'diners';
-    case 'jcb':
-      return 'jcb';
-    case 'unionpay':
-      return 'unionpay';
-    default:
-      return null;
-  }
-};
-
-export const mapBadgeStatus = (status: BaseBadgeProps['status']): Severity => {
-  if (!status || status === 'default' || status === 'processing') {
-    return 'info';
-  }
-
-  return status;
-};

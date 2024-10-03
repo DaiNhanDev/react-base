@@ -1,5 +1,4 @@
 import { isRejectedWithValue, Middleware } from '@reduxjs/toolkit';
-import { notificationController } from 'controllers/notificationController';
 
 /**
  * Log a warning and show a toast!

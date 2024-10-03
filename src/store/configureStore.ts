@@ -4,8 +4,9 @@ import createSagaMiddleware from 'redux-saga';
 import loggerMiddleware from 'redux-logger';
 
 import { createReducer } from './reducers';
+// import { errorLoggingMiddleware } from './middlewares/errorLogging.middleware';
 
-export function configureAppStore(history) {
+export function configureAppStore() {
   const reduxSagaMonitorOptions = {};
   const sagaMiddleware = createSagaMiddleware(reduxSagaMonitorOptions);
   const { run: runSaga } = sagaMiddleware;

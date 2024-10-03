@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import { useResponsive } from 'hooks/useResponsive';
-import { Overlay } from 'components/common/Overlay/Overlay';
+// import { Overlay } from 'components/common/Overlay/Overlay';
 import * as S from './styled';
 import { SiderLogo } from '../SiderLogo';
-import SiderMenu from '../SiderMenu/index.';
+import SiderMenu from '../SiderMenu';
 
 interface MainSiderProps {
   isCollapsed: boolean;
@@ -39,7 +39,7 @@ const MainSider: React.FC<MainSiderProps> = ({
           <SiderMenu setCollapsed={setCollapsed} />
         </S.SiderContent>
       </S.Sider>
-      {mobileOnly && <Overlay onClick={toggleSider} show={!isCollapsed} />}
+      {/* {mobileOnly && <Overlay onClick={toggleSider} show={!isCollapsed} />} */}
     </>
   );
 };

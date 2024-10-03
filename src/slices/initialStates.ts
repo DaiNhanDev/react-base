@@ -5,10 +5,9 @@ import { ErrorState } from './errors/types';
 import { LoadingState } from './loading/types';
 import { ThemeState } from './theme/types';
 import { UserState } from './user/types';
-import { readUser } from 'services/localStorage.service';
 import { RootState } from 'types';
 
-const themeKey = getThemeFromStorage() || 'system';
+const themeKey = getThemeFromStorage();
 
 const auth: AuthState = {
   token: null,
@@ -31,11 +30,11 @@ const loading: LoadingState = {
 // };
 
 const theme: ThemeState = {
-  selected: themeKey,
+  selected: 'light',
 };
 
 const user: UserState = {
-  user: readUser(),
+  user: null,
 };
 
 export const initialStates: RootState = {

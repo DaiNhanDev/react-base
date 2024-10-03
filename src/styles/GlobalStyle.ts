@@ -1,12 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import { resetCss } from './resetCss';
 import {
-  BREAKPOINTS,
   FONT_SIZE,
   FONT_WEIGHT,
-  Media,
-  media,
-} from './themes/constants';
+} from './constants';
+import { BREAKPOINTS, media, Media } from './media';
 
 export default createGlobalStyle`
 

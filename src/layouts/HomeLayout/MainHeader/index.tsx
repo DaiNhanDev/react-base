@@ -1,8 +1,7 @@
-import { WithChildrenProps } from 'types/generalTypes';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import * as S from './styled';
 
-interface MainHeaderProps extends WithChildrenProps {
+interface MainHeaderProps extends PropsWithChildren {
   isTwoColumnsLayout: boolean;
 }
 

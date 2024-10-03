@@ -1,5 +1,5 @@
+import { Loading } from 'components/Common/Loading/Loading';
 import React, { lazy, Suspense } from 'react';
-import { Loading } from 'components/common/Loading/Loading';
 import styled from 'styled-components';
 
 type Unpromisify<T> = T extends Promise<infer P> ? P : never;

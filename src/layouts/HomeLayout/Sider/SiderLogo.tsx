@@ -4,7 +4,6 @@ import { RightOutlined } from '@ant-design/icons';
 import { useResponsive } from 'hooks/useResponsive';
 import logo from 'assets/logo.png';
 import logoDark from 'assets/logo-dark.png';
-import { useAppSelector } from 'hooks/reduxHooks';
 import { useThemeSlice } from 'slices';
 
 interface SiderLogoProps {

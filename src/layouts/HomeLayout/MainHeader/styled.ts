@@ -1,5 +1,5 @@
-import { BaseLayout } from 'components/common/BaseLayout/BaseLayout';
-import { Media, LAYOUT } from 'styles/themes/constants';
+import { BaseLayout } from 'components';
+import { Media, LAYOUT } from 'styles';
 import styled, { css } from 'styled-components';
 
 interface Header {

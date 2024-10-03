@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 import { LeftOutlined } from '@ant-design/icons';
-import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
-import { BaseInput as CommonInput } from 'components/common/Inputs/BaseInput/BaseInput';
-import { InputPassword as CommonInputPassword } from 'components/common/Inputs/InputPassword/InputPassword';
+// import { BaseForm } from 'components/common/Forms/BaseForm/BaseForm';
+// import { BaseInput as CommonInput } from 'components/common/Inputs/BaseInput';
+// import { InputPassword as CommonInputPassword } from 'components/common/Inputs/InputPassword';
 import loginBackground from 'assets/images/login-bg.webp';
 import {
   BORDER_RADIUS,
   FONT_SIZE,
   FONT_WEIGHT,
   Media,
-} from 'styles/themes/constants';
-import { BaseCheckbox } from 'components/common/BaseCheckbox/BaseCheckbox';
-import { BaseButton } from 'components/common/BaseButton/BaseButton';
+} from 'styles';
+// import { BaseCheckbox } from 'components/common/BaseCheckbox/BaseCheckbox';
+// import { BaseButton } from 'components/common/BaseButton/BaseButton';
 
 export const Wrapper = styled.div`
   height: 100vh;
@@ -35,169 +35,4 @@ export const LoginWrapper = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-`;
-
-export const FormWrapper = styled.div`
-  padding: 2.5rem;
-  width: 31.75rem;
-  overflow: auto;
-  background-color: rgba(var(--background-rgb-color), 0.93);
-  border-radius: ${BORDER_RADIUS};
-
-  ${Media.xs()} {
-    padding: 2.5rem 1.25rem;
-    width: 20.75rem;
-    max-height: calc(100vh - 3rem);
-  }
-
-  ${Media.md()} {
-    padding: 2.5rem;
-    width: 31.75rem;
-    max-height: calc(100vh - 3rem);
-  }
-`;
-
-export const FormTitle = styled.div`
-  color: ${({ theme }) => theme.antd.colorPrimary};
-
-  ${Media.md()} {
-    margin-bottom: 0.625rem;
-    font-size: ${FONT_SIZE.lg};
-    font-weight: ${FONT_WEIGHT.bold};
-    line-height: 1.5625rem;
-  }
-
-  ${Media.md()} {
-    margin-bottom: 0.875rem;
-    font-size: ${FONT_SIZE.xxl};
-    font-weight: ${FONT_WEIGHT.bold};
-    line-height: 1.9375rem;
-  }
-
-  ${Media.xl()} {
-    margin-bottom: 0.9375rem;
-    font-size: ${FONT_SIZE.xxxl};
-    font-weight: ${FONT_WEIGHT.extraBold};
-    line-height: 2.125rem;
-  }
-`;
-
-export const FormCheckbox = styled(BaseCheckbox)`
-  display: flex;
-  padding-left: 0.125rem;
-
-  & .ant-checkbox-inner {
-    border-radius: 3px;
-    transform: scale(1.375);
-  }
-
-  & .ant-checkbox-input {
-    transform: scale(1.375);
-  }
-`;
-
-export const FormItem = styled(BaseForm.Item)`
-  margin-bottom: 0.75rem;
-  & .ant-form-item-control-input {
-    min-height: 3.125rem;
-  }
-
-  & .ant-form-item-explain-error {
-    font-size: ${FONT_SIZE.xs};
-  }
-
-  & label {
-    color: ${({ theme }) => theme.antd.colorPrimary};
-    font-size: ${FONT_SIZE.xs};
-    line-height: 1.25rem;
-  }
-
-  &.ant-form-item-has-feedback .ant-input-affix-wrapper .ant-input-suffix {
-    padding-right: 1.5rem;
-  }
-`;
-
-export const FormInput = styled(CommonInput)`
-  color: var(--text-main-color);
-  background: transparent;
-
-  & input.ant-input {
-    background: transparent;
-  }
-`;
-
-export const FormInputPassword = styled(CommonInputPassword)`
-  color: var(--text-main-color);
-  background: transparent;
-
-  & input.ant-input {
-    background: transparent;
-  }
-`;
-
-export const ActionsWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-`;
-
-export const Text = styled.span`
-  color: var(--text-main-color);
-  font-size: ${FONT_SIZE.xs};
-  font-weight: ${FONT_WEIGHT.regular};
-`;
-
-export const LinkText = styled(Text)`
-  text-decoration: underline;
-  color: ${({ theme }) => theme.antd.colorPrimary};
-`;
-
-export const SubmitButton = styled(BaseButton)`
-  font-size: ${FONT_SIZE.md};
-  font-weight: ${FONT_WEIGHT.semibold};
-  width: 100%;
-`;
-
-export const SocialButton = styled(BaseButton)`
-  font-size: ${FONT_SIZE.md};
-  font-weight: ${FONT_WEIGHT.semibold};
-  color: ${({ theme }) => theme.antd.colorPrimary};
-  border: 1px solid ${({ theme }) => theme.antd.colorPrimary};
-  width: 100%;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-`;
-
-export const FooterWrapper = styled.div`
-  margin-top: 1.25rem;
-  text-align: center;
-`;
-
-export const BackIcon = styled(LeftOutlined)`
-  font-size: 0.75rem;
-  margin-right: 0.75rem;
-`;
-
-export const BackWrapper = styled.div`
-  font-size: ${FONT_SIZE.md};
-  font-weight: ${FONT_WEIGHT.semibold};
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 1.25rem;
-`;
-
-export const SocialIconWrapper = styled.div`
-  display: flex;
-  margin-right: 0.8125rem;
-  ${Media.md()} {
-    margin-right: 0.625rem;
-  }
-
-  ${Media.md()} {
-    margin-right: 0.8125rem;
-  }
 `;

@@ -15,7 +15,7 @@ import { configureAppStore } from 'store/configureStore';
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
-const store = configureAppStore(history);
+const store = configureAppStore();
 
 root.render(
   <React.StrictMode>

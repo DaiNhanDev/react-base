@@ -6,7 +6,6 @@ import { initialStates } from 'slices/initialStates';
 import { useSelectorData } from 'slices/selectors';
 
 import { saga } from './saga';
-import { ResetPasswordRequest, SignUpRequest } from 'apis/auth.api';
 import { AuthState } from './types';
 
 const name = 'auth';
@@ -20,15 +19,15 @@ const slice = createSlice({
       action: PayloadAction<{ email: string; password: string }>,
     ) => {},
     doLoginSuccess: (state) => {},
-    doResetPassword: (state, action: PayloadAction<ResetPasswordRequest>) => {},
-    doResetPasswordSuccess: (state) => {},
-    doSignUp: (state, action: PayloadAction<SignUpRequest>) => {},
-    doSignUpSuccess: (state) => {},
-    doVerifySecurityCode: (state, action: PayloadAction<SignUpRequest>) => {},
-    doVerifySecurityCodeSuccess: (state) => {},
-    doSetNewPassword: (state, action: PayloadAction<SignUpRequest>) => {},
-    doSetNewPasswordSuccess: (state) => {},
-    doLogout: (state) => {},
+    // doResetPassword: (state, action: PayloadAction<ResetPasswordRequest>) => {},
+    // doResetPasswordSuccess: (state) => {},
+    // doSignUp: (state, action: PayloadAction<SignUpRequest>) => {},
+    // doSignUpSuccess: (state) => {},
+    // doVerifySecurityCode: (state, action: PayloadAction<SignUpRequest>) => {},
+    // doVerifySecurityCodeSuccess: (state) => {},
+    // doSetNewPassword: (state, action: PayloadAction<SignUpRequest>) => {},
+    // doSetNewPasswordSuccess: (state) => {},
+    // doLogout: (state) => {},
   },
 });
 
