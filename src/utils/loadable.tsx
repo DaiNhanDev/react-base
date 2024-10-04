@@ -1,4 +1,4 @@
-import { Loading } from 'components/Common/Loading/Loading';
+import { Loading } from 'components';
 import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
 

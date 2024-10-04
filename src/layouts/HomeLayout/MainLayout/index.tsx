@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useResponsive } from 'hooks/useResponsive';
-// import { Header } from 'components/header/Header';
+import { Header } from 'components/Header';
 import MainSider from '../Sider/MainSider';
 import MainContent from '../MainContent';
 import { MainHeader } from '../MainHeader';
@@ -19,14 +19,14 @@ const MainLayout: React.FC = () => {
         setCollapsed={setSiderCollapsed}
       />
       <S.LayoutMain>
-        {/* <MainHeader isTwoColumnsLayout={isTwoColumnsLayout}>
+        <MainHeader>
           <Header
             toggleSider={toggleSider}
             isSiderOpened={!siderCollapsed}
             isTwoColumnsLayout={isTwoColumnsLayout}
           />
-        </MainHeader> */}
-        <MainContent id="main-content" $isTwoColumnsLayout={isTwoColumnsLayout}>
+        </MainHeader>
+        <MainContent id="main-content">
           <div>
             <Outlet />
           </div>

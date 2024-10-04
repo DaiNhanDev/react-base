@@ -11,6 +11,7 @@ import { AppRouter } from 'routes/AppRouter';
 import { useThemeSlice } from 'slices';
 import { ThemeProvider } from 'styles/ThemeProvider';
 import GlobalStyle from 'styles/GlobalStyle';
+import { componentsTheme } from 'styles';
 // import { themes } from 'styles';
 
 const App: React.FC = () => {
@@ -33,11 +34,7 @@ const App: React.FC = () => {
               // colorError: themeObject[theme].error,
               // colorWarning: themeObject[theme].warning,
             },
-            components: {
-              Layout: {
-                siderBg: '#fff'
-              }
-            }
+            components: componentsTheme[themeKey]
           }}
           locale={language === 'en' ? enUS : deDe}
         >

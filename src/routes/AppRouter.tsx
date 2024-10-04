@@ -15,7 +15,6 @@ const Logout = React.lazy(() => import('./Logout'));
 export const NFT_DASHBOARD_PATH = '/';
 export const MEDICAL_DASHBOARD_PATH = '/medical-dashboard';
 
-
 const AuthLayoutFallback = AuthLayout;
 const LogoutFallback = Logout;
 
@@ -31,10 +30,8 @@ export const AppRouter: React.FC = () => {
       <Routes>
         <Route path={NFT_DASHBOARD_PATH} element={protectedLayout}>
           <Route index element={<Dashboard />} />
-         
         </Route>
-        <Route path="/auth" element={<AuthLayoutFallback />}>
-        </Route>
+        <Route path="/auth" element={<AuthLayoutFallback />}></Route>
         <Route path="/logout" element={<LogoutFallback />} />
       </Routes>
     </BrowserRouter>

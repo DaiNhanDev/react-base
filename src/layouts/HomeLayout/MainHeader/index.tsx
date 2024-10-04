@@ -1,17 +1,8 @@
 import React, { PropsWithChildren } from 'react';
-import * as S from './styled';
+import {Header} from './styled';
 
-interface MainHeaderProps extends PropsWithChildren {
-  isTwoColumnsLayout: boolean;
-}
+interface MainHeaderProps extends PropsWithChildren {}
 
-export const MainHeader: React.FC<MainHeaderProps> = ({
-  isTwoColumnsLayout,
-  children,
-}) => {
-  return (
-    <S.Header $isTwoColumnsLayoutHeader={isTwoColumnsLayout}>
-      {children}
-    </S.Header>
-  );
+export const MainHeader: React.FC<MainHeaderProps> = ({ children }) => {
+  return <Header>{children}</Header>;
 };

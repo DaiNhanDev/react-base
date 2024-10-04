@@ -4,12 +4,7 @@ import { LeftOutlined } from '@ant-design/icons';
 // import { BaseInput as CommonInput } from 'components/common/Inputs/BaseInput';
 // import { InputPassword as CommonInputPassword } from 'components/common/Inputs/InputPassword';
 import loginBackground from 'assets/images/login-bg.webp';
-import {
-  BORDER_RADIUS,
-  FONT_SIZE,
-  FONT_WEIGHT,
-  Media,
-} from 'styles';
+import { BORDER_RADIUS, FONT_SIZE, FONT_WEIGHT, Media } from 'styles';
 // import { BaseCheckbox } from 'components/common/BaseCheckbox/BaseCheckbox';
 // import { BaseButton } from 'components/common/BaseButton/BaseButton';
 

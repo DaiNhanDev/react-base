@@ -1,9 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { resetCss } from './resetCss';
-import {
-  FONT_SIZE,
-  FONT_WEIGHT,
-} from './constants';
+import { FONT_SIZE, FONT_WEIGHT } from './constants';
 import { BREAKPOINTS, media, Media } from './media';
 
 export default createGlobalStyle`

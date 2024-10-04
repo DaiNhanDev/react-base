@@ -1,4 +1,4 @@
-import { UserModel } from "models";
+import { UserModel } from 'models';
 
 /* --- STATE --- */
 export interface UserState {

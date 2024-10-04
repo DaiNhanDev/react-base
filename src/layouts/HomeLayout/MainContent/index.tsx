@@ -2,12 +2,8 @@ import styled, { css } from 'styled-components';
 import { LAYOUT, Media } from 'styles';
 import { BaseLayout } from 'components';
 
-interface HeaderProps {
-  $isTwoColumnsLayout: boolean;
-}
-
 const { mobile, desktop } = LAYOUT;
-export default styled(BaseLayout.Content)<HeaderProps>`
+export default styled(BaseLayout.Content)`
   padding: ${mobile.paddingVertical} ${mobile.paddingHorizontal};
   overflow: auto;
   display: flex;
@@ -16,13 +12,5 @@ export default styled(BaseLayout.Content)<HeaderProps>`
 
   ${Media.md()} {
     padding: ${desktop.paddingVertical} ${desktop.paddingHorizontal};
-  }
-
-  ${Media.xl()} {
-    ${(props) =>
-      props?.$isTwoColumnsLayout &&
-      css`
-        padding: 0;
-      `}
   }
 `;

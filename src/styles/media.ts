@@ -74,7 +74,6 @@ export const media = {
   xxl: getMedia(BREAKPOINTS.xxl),
 };
 
-
 export class Media {
   static SIZE = BREAKPOINTS;
 

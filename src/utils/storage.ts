@@ -1,4 +1,3 @@
-
 export const STORAGE = {
   LANGUAGE: 'LANGUAGE',
   USER_TOKEN: 'USER_TOKEN',

@@ -1,12 +1,29 @@
 export interface UserModel {
   id: number;
-  email: string;
-  name: string;
+  firstName: string;
+  lastName: string;
+  imgUrl: string;
+  userName: string;
+  email: {
+    name: string;
+    verified: boolean;
+  };
+  phone: {
+    number: string;
+    verified: boolean;
+  };
+  sex: 'male' | 'female';
   birthday: string;
-  compay_id: number | null;
-  manager_id: number | null;
-  store_id: number | null;
-  role_id: number;
-  createdAt: string;
-  updatedAt: string;
+  lang: 'en' | 'de';
+  country: string;
+  city: string;
+  address1: string;
+  address2?: string;
+  zipcode: number;
+  website?: string;
+  socials?: {
+    twitter?: string;
+    facebook?: string;
+    linkedin?: string;
+  };
 }

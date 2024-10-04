@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Button as AntButton } from 'antd';
 
-interface BtnProps {
-}
+interface BtnProps {}
 
 export const Button = styled(AntButton)<BtnProps>`
   display: flex;

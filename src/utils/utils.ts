@@ -1,5 +1,5 @@
 export const camelize = (string: string): string => {
-    return string
+  return string
     .split(' ')
     .map((word, index) =>
       index === 0 ? word.toLowerCase() : word[0].toUpperCase() + word.slice(1),
@@ -30,7 +30,7 @@ export const hexToHSL = (hex: string): { h: number; s: number; l: number } => {
       min = Math.min(r, g, b);
     let h, s;
     const l = (max + min) / 2;
-    if (max == min) {
+    if (max === min) {
       h = s = 0; // achromatic
     } else {
       const d = max - min;

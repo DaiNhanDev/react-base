@@ -1,25 +1,13 @@
 import { BaseLayout } from 'components';
 import { Media, LAYOUT } from 'styles';
-import styled, { css } from 'styled-components';
-
-interface Header {
-  $isTwoColumnsLayoutHeader: boolean;
-}
+import styled from 'styled-components';
 
 const { desktop } = LAYOUT;
-export const Header = styled(BaseLayout.Header)<Header>`
+export const Header = styled(BaseLayout.Header)`
   line-height: 1.5;
 
   ${Media.md()} {
     padding: ${desktop.paddingVertical} ${desktop.paddingHorizontal};
     height: ${desktop.headerHeight};
-  }
-
-  ${Media.md()} {
-    ${(props) =>
-      props?.$isTwoColumnsLayoutHeader &&
-      css`
-        padding: 0;
-      `}
   }
 `;

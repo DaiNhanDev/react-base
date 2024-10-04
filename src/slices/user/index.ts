@@ -22,7 +22,7 @@ const slice = createSlice({
 
 export const { actions, reducer } = slice;
 
-export const useUser = () => {
+export const useUserSlice = () => {
   const { actions, name, reducer } = slice;
 
   useInjectReducer({ key: name, reducer });
