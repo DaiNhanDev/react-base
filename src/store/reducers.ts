@@ -7,6 +7,7 @@ import { createBrowserHistory } from 'history';
 
 import { InjectedReducersType } from 'utils/types/injector-typings';
 import themeSlice from '../slices/theme';
+import { loadingReducer } from '../slices/loading';
 
 export const history = createBrowserHistory();
 
@@ -16,6 +17,7 @@ export const history = createBrowserHistory();
 export function createReducer(injectedReducers: InjectedReducersType = {}) {
   return combineReducers({
     theme: themeSlice.reducer,
+    loading: loadingReducer,
     ...injectedReducers,
   });
 }

@@ -1,4 +1,5 @@
 /* --- STATE --- */
 export interface AuthState {
-  token: string | null;
+  token_type: string;
+  authenticated: boolean;
 }

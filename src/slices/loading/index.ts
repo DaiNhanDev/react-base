@@ -6,16 +6,16 @@ import { initialStates } from 'slices/initialStates';
 import { useSelectorData } from 'slices/selectors';
 import { LoadingState } from './types';
 
-export const initialState: LoadingState = {
-  loading: false,
-};
 const name = 'loading';
 const slice = createSlice({
   name,
   initialState: initialStates[name],
   reducers: {
-    setLoading(state, action: PayloadAction<boolean>) {
-      state.loading = action.payload;
+    addLoading(state, action: PayloadAction<string>) {
+      state.loadings = [...state.loadings, action.payload];
+    },
+    removeLoading(state, action: PayloadAction<string>) {
+      state.loadings = state.loadings.filter((f) => f !== action.payload);
     },
   },
 });
@@ -27,10 +27,8 @@ export const useLoading = () => {
   const dispatch = useDispatch();
   const { actions } = slice;
 
-  const loading: LoadingState = useSelectorData(name) as LoadingState;
-
-  const setLoading = (payload) => dispatch(actions.setLoading(payload));
-  return { setLoading, ...loading };
+  const state = useSelectorData(name) as LoadingState;
+  const addLoading = (payload) => dispatch(actions.addLoading(payload));
+  const removeLoading = (payload) => dispatch(actions.removeLoading(payload));
+  return { addLoading, removeLoading, ...state };
 };
-
-// export default slice;

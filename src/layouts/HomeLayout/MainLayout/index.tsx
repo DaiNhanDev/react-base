@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
-import { useResponsive } from 'hooks/useResponsive';
+import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import { Header } from 'components/Header';
 import MainSider from '../Sider/MainSider';
 import MainContent from '../MainContent';
@@ -8,28 +7,15 @@ import { MainHeader } from '../MainHeader';
 import * as S from './styled';
 
 const MainLayout: React.FC = () => {
-  const [isTwoColumnsLayout, setIsTwoColumnsLayout] = useState(true);
-  const [siderCollapsed, setSiderCollapsed] = useState(true);
-  const toggleSider = () => setSiderCollapsed(!siderCollapsed);
-
   return (
     <S.LayoutMaster>
-      <MainSider
-        isCollapsed={siderCollapsed}
-        setCollapsed={setSiderCollapsed}
-      />
+      <MainSider />
       <S.LayoutMain>
         <MainHeader>
-          <Header
-            toggleSider={toggleSider}
-            isSiderOpened={!siderCollapsed}
-            isTwoColumnsLayout={isTwoColumnsLayout}
-          />
+          <Header />
         </MainHeader>
         <MainContent id="main-content">
-          <div>
-            <Outlet />
-          </div>
+          <Outlet />
         </MainContent>
       </S.LayoutMain>
     </S.LayoutMaster>

@@ -8,7 +8,8 @@ import { RootState } from 'types';
 const avatarImg = process.env.REACT_APP_ASSETS_BUCKET + '/avatars/avatar5.webp';
 
 const auth: AuthState = {
-  token: null,
+  authenticated: false,
+  token_type: ''
 };
 
 const broadcast: BroadcastState = {
@@ -20,7 +21,7 @@ const errors: ErrorState = {
 };
 
 const loading: LoadingState = {
-  loading: false,
+  loadings: [],
 };
 
 // const toast:  = {

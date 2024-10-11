@@ -1,3 +1,3 @@
 export interface LoadingState {
-  loading: boolean;
+  loadings: string[];
 }

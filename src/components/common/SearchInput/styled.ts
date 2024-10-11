@@ -21,7 +21,7 @@ export const SearchInput = styled(BaseInput.Search)`
     font-weight: 600;
     background-color: var(--background-color);
 
-    ${Media.md()} {
+    ${Media.md} {
       font-size: 1rem;
     }
 

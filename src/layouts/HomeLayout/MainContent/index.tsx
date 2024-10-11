@@ -9,8 +9,7 @@ export default styled(BaseLayout.Content)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  ${Media.md()} {
+  ${Media.md} {
     padding: ${desktop.paddingVertical} ${desktop.paddingHorizontal};
   }
 `;

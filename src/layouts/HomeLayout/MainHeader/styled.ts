@@ -6,7 +6,7 @@ const { desktop } = LAYOUT;
 export const Header = styled(BaseLayout.Header)`
   line-height: 1.5;
 
-  ${Media.md()} {
+  ${Media.md} {
     padding: ${desktop.paddingVertical} ${desktop.paddingHorizontal};
     height: ${desktop.headerHeight};
   }

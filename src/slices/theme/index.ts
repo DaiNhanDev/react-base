@@ -2,11 +2,9 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from 'utils/@reduxjs/toolkit';
 import { useInjectReducer } from 'utils/redux-injectors';
 import { useSelector, useDispatch } from 'react-redux';
-import { getThemeFromStorage, ThemeKeyType } from 'styles';
+import { ThemeKeyType } from 'styles';
 import { ThemeState } from './types';
 import { selectThemeData, selectThemeKey } from './selectors';
-
-const themeKey = getThemeFromStorage();
 
 export const initialState: ThemeState = {
   selected: 'light',

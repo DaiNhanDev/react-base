@@ -7,11 +7,11 @@ export const LayoutMaster = styled(BaseLayout)`
 `;
 
 export const LayoutMain = styled(BaseLayout)`
-  ${Media.md()} {
+  ${Media.md} {
     margin-left: 80px;
   }
 
-  ${Media.xl()} {
+  ${Media.xl} {
     margin-left: unset;
   }
 `;

@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { GitHubButton } from 'components/Header/components/GithubButton';
 import { LAYOUT, Media } from 'styles';
 import { BaseCollapse, BurgerIcon, BaseCol } from '../Common';
 
@@ -10,7 +9,7 @@ export const HeaderActionWrapper = styled.div`
   .ant-badge {
     font-size: 1.25rem;
 
-    ${Media.md()} {
+    ${Media.md} {
       font-size: 1.625rem;
     }
   }
@@ -27,7 +26,7 @@ export const DropdownCollapse = styled(BaseCollapse)`
 
     color: var(--primary-color);
 
-    ${Media.md()} {
+    ${Media.md} {
       font-size: 1rem;
     }
   }
@@ -63,26 +62,5 @@ export const SearchColumn = styled(BaseCol)`
   padding: ${LAYOUT.desktop.paddingVertical} ${LAYOUT.desktop.paddingHorizontal};
 `;
 
-interface ProfileColumn {
-  $isTwoColumnsLayout: boolean;
-}
-
-export const ProfileColumn = styled(BaseCol)<ProfileColumn>`
-  ${Media.md()} {
-    ${(props) =>
-      props?.$isTwoColumnsLayout &&
-      css`
-        background-color: var(--sider-background-color);
-        padding: ${LAYOUT.desktop.paddingVertical}
-          ${LAYOUT.desktop.paddingHorizontal};
-      `}
-  }
-`;
-
-export const GHButton = styled(GitHubButton)`
-  display: none;
-
-  ${Media.lg()} {
-    display: block;
-  }
+export const ProfileColumn = styled(BaseCol)`
 `;

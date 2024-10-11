@@ -18,16 +18,14 @@ const slice = createSlice({
       state,
       action: PayloadAction<{ email: string; password: string }>,
     ) => {},
-    doLoginSuccess: (state) => {},
-    // doResetPassword: (state, action: PayloadAction<ResetPasswordRequest>) => {},
-    // doResetPasswordSuccess: (state) => {},
-    // doSignUp: (state, action: PayloadAction<SignUpRequest>) => {},
-    // doSignUpSuccess: (state) => {},
-    // doVerifySecurityCode: (state, action: PayloadAction<SignUpRequest>) => {},
-    // doVerifySecurityCodeSuccess: (state) => {},
-    // doSetNewPassword: (state, action: PayloadAction<SignUpRequest>) => {},
-    // doSetNewPasswordSuccess: (state) => {},
-    // doLogout: (state) => {},
+    doLoginSuccess: (state, action: PayloadAction<AuthState>) => {
+      state.authenticated = action.payload.authenticated;
+      state.token_type = action.payload.token_type;
+    },
+    setAuthentication: (state, action: PayloadAction<{ authenticated }>) => {
+      state.authenticated = action.payload.authenticated;
+      state.token_type = action.payload.authenticated ? 'ADMIN' : '';
+    },
   },
 });
 
@@ -43,9 +41,11 @@ export const useAuth = () => {
   const doLogin = (payload: { email: string; password: string }) =>
     dispatch(actions.doLogin(payload));
   const state = useSelectorData(name) as AuthState;
-
+  const setAuthentication = (payload: { authenticated: boolean }) =>
+    dispatch(actions.setAuthentication(payload));
   return {
     doLogin,
+    setAuthentication,
     ...state,
   };
 };

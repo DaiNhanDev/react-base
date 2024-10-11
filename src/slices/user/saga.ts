@@ -4,11 +4,11 @@ import { sagaCustomize } from '../sagaCustomize';
 
 import { actions } from '.';
 
-export function* getMeSaga() {
+export function* getMeSaga({ type }) {
   yield sagaCustomize(function* () {
     // const response = yield call(getMe);
     // yield put(actions.getMeSuccess(response.data));
-  });
+  }, type);
 }
 
 export function* saga() {

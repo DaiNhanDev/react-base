@@ -1,7 +1,0 @@
-{
-  "fieldRequired": "Trường {{field}} là bắt buộc nhập.",
-  "sign_in": {
-    "email_format": "Không đúng định dạng email.",
-    "min_password": "Mật khẩu phải có ít nhất 6 kí tự."
-  }
-}

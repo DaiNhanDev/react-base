@@ -1,50 +1,84 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { ConfigProvider } from 'antd';
 import { HelmetProvider } from 'react-helmet-async';
-import deDe from 'antd/lib/locale/de_DE';
-import enUS from 'antd/lib/locale/en_US';
 import 'typeface-montserrat';
 import 'typeface-lato';
-import { useLanguage } from './hooks/useLanguage';
 import { useThemeWatcher } from './hooks/useThemeWatcher';
 import { AppRouter } from 'routes/AppRouter';
 import { useThemeSlice } from 'slices';
 import { ThemeProvider } from 'styles/ThemeProvider';
 import GlobalStyle from 'styles/GlobalStyle';
-import { componentsTheme } from 'styles';
-// import { themes } from 'styles';
+import { componentsTheme, tokensTheme } from 'styles';
+import { useBroadcast } from 'slices/broadcast';
+import { getLocalStorage, STORAGE } from 'utils/storage';
+import { BROADCAST_CHANNEL } from 'constants/broadcast';
+import { useAuth } from 'slices/auth';
+import { useLoading } from 'slices/loading';
+import { Loading } from 'components';
 
 const App: React.FC = () => {
-  const { language } = useLanguage();
   const { themeKey } = useThemeSlice();
+  const { setBroadcastChannel, boardcastChannel } = useBroadcast();
+  const { setAuthentication, authenticated } = useAuth();
+  const [loading, setLoading] = useState(true);
+  // const { loadings } = useLoading();
   useThemeWatcher();
+  const userToken = getLocalStorage(STORAGE.USER_TOKEN);
+
+  useEffect(() => {
+    if (userToken && !authenticated) {
+      setAuthentication({ authenticated: true });
+    }
+    if (!userToken && authenticated) {
+      setAuthentication({ authenticated: false });
+    }
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [authenticated, userToken]);
+  // console.log('====> loadings: ', loadings);
+  useEffect(() => {
+    const broadcast = new BroadcastChannel('auth');
+    setBroadcastChannel({ broadcast });
+
+    return () => {
+      broadcast.close();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (boardcastChannel) {
+      boardcastChannel.addEventListener('message', (event) => {
+        const userToken = getLocalStorage(STORAGE.USER_TOKEN);
+        if (event.data === BROADCAST_CHANNEL.LOGIN && userToken) {
+        }
+      });
+    }
+  }, [boardcastChannel]);
+
+  const renderApp = useMemo(() => {
+    if (loading) return <Loading />;
+
+    return <AppRouter />;
+  }, [loading]);
 
   return (
-    <>
-      {/* <meta name="theme-color" content={themes[theme].primary} /> */}
-      <HelmetProvider>
-        <ConfigProvider
-          theme={{
-            hashed: false,
-            cssVar: true,
-            token: {
-              // colorPrimary: themeObject[theme].primary,
-              // colorInfo: themeObject[theme].primary,
-              // colorSplit: themeObject[theme].success,
-              // colorError: themeObject[theme].error,
-              // colorWarning: themeObject[theme].warning,
-            },
-            components: componentsTheme[themeKey]
-          }}
-          locale={language === 'en' ? enUS : deDe}
-        >
-          <ThemeProvider>
-            <GlobalStyle />
-            <AppRouter />
-          </ThemeProvider>
-        </ConfigProvider>
-      </HelmetProvider>
-    </>
+    <HelmetProvider>
+      <ConfigProvider
+        theme={{
+          hashed: false,
+          cssVar: true,
+          token: tokensTheme[themeKey],
+          components: componentsTheme[themeKey],
+        }}
+      >
+        <ThemeProvider>
+          <GlobalStyle />
+          {renderApp}
+        </ThemeProvider>
+      </ConfigProvider>
+    </HelmetProvider>
   );
 };
 

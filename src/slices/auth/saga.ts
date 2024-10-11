@@ -10,8 +10,12 @@ import { actions } from '.';
 
 export function* loginSaga({
   payload,
+  type
 }: PayloadAction<{ email: string; password: string }>) {
   yield sagaCustomize(function* () {
+    const token = 'token';
+    localStorage.setItem(STORAGE.USER_TOKEN, token);
+
     // const response = yield call(login, payload);
     // localStorage.setItem(STORAGE.USER_TOKEN, response.data.token);
     // const {
@@ -19,15 +23,16 @@ export function* loginSaga({
     // }: RootState = yield select();
     // if (boardcastChannel) {
     //   boardcastChannel.postMessage('LOGIN');
+      yield put(
+        actions.doLoginSuccess({
+          authenticated: !!token,
+          token_type: 'ADMIN',
+        }),
+      );
     // }
-  });
+  }, type);
 }
 
-export function* getMeSaga() {
-  yield sagaCustomize(function* () {
-    // const response = yield call(getMe);
-    // yield put(actions.getMeSuccess(response.data));
-  });
+export function* saga() {
+  yield takeLatest(actions.doLogin.type, loginSaga);
 }
-
-export function* saga() {}

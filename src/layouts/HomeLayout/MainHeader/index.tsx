@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import {Header} from './styled';
+import { Header } from './styled';
 
 interface MainHeaderProps extends PropsWithChildren {}
 

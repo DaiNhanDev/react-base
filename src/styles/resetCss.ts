@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { FONT_FAMILY } from './constants';
 
 export const resetCss = css`
   * {
@@ -7,18 +8,20 @@ export const resetCss = css`
     padding: 0;
   }
 
-  /* ::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 1rem;
   }
+
   ::-webkit-scrollbar-track {
     background-color: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-color);
+    background-color: ${({theme}) =>  theme.app.scroll};
     border-radius: 1.25rem;
     border: 0.375rem solid transparent;
     background-clip: content-box;
-  } */
+  }
 
   body {
     font-weight: 500;

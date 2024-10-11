@@ -11,31 +11,33 @@ export const Sider = styled(BaseLayout.Sider)`
   z-index: 5;
   min-height: 100vh;
   max-height: 100vh;
-  /* background-color: var(--layout-sider-bg-color); */
-  /* color: ${({ theme }) => theme.antd.colorTextSecondary}; */
+  .ant-layout-sider-children {
+    overflow: auto;
+  }
 
-  ${Media.md()} {
+  ${Media.md} {
     right: unset;
     left: 0;
   }
 
-  ${Media.xl()} {
+  ${Media.xl} {
     position: unset;
   }
 `;
 
 export const CollapseButton = styled(BaseButton)<{ $isCollapsed: boolean }>`
-  background: var(--collapse-background-color);
+  background:${({ theme }) => theme.app.collapseBackground};
 
-  border: 1px solid var(--border-color);
+  border: 1px solid ${({ theme }) => theme.app.border};
   transition: all 0.2s ease;
   position: absolute;
   right: 0.5rem;
+  top: 20px;
 
   ${(props) =>
     props.$isCollapsed &&
     css`
-      right: -1rem;
+      right: -16px;
     `}
 
   color: ${({ theme }) => theme.antd.colorTextSecondary};
@@ -43,24 +45,20 @@ export const CollapseButton = styled(BaseButton)<{ $isCollapsed: boolean }>`
   &:hover {
     color: ${({ theme }) => theme.antd.colorTextSecondary};
     background: ${({ theme }) => theme.antd.colorPrimary};
-    border: 1px solid var(--border-color);
+    border: 1px solid ${({ theme }) => theme.app.border};
   }
 
   &:focus {
     color: ${({ theme }) => theme.antd.colorTextSecondary};
     background: ${({ theme }) => theme.antd.colorPrimary};
-    border: 1px solid var(--border-color);
+    border: 1px solid ${({ theme }) => theme.app.border};
   }
 `;
 
 export const SiderContent = styled.div`
-  overflow-y: auto;
+  /* overflow-y: auto; */
   overflow-x: hidden;
-  max-height: calc(100vh - ${LAYOUT.mobile.headerHeight});
-
-  ${Media.md()} {
-    max-height: calc(100vh - ${LAYOUT.desktop.headerHeight});
-  }
+  ${Media.md} {}
 `;
 
 export const SiderLogoLink = styled(Link)`
@@ -68,25 +66,21 @@ export const SiderLogoLink = styled(Link)`
   align-items: center;
   overflow: hidden;
   position: relative;
+  width:  100%;
+  justify-content: center;
+  img {
+    width: 75%;
+  }
 `;
 
 export const SiderLogoDiv = styled.div`
-  height: ${LAYOUT.mobile.headerHeight};
   padding: ${LAYOUT.mobile.headerPadding};
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  ${Media.md()} {
-    height: ${LAYOUT.desktop.headerHeight};
+  ${Media.md} {
     padding-top: ${LAYOUT.desktop.paddingVertical};
     padding-bottom: ${LAYOUT.desktop.paddingVertical};
   }
-`;
-
-export const BrandSpan = styled.span`
-  margin: 0 1rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-  color: var(--white);
 `;
